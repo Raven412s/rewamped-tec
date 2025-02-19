@@ -14,7 +14,7 @@ export default function Footer() {
     <section className=" h-full  p-5">
       <div className="flex flex-col size-full p-3 gap-6">
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full border-2 border-gold overflow-hidden rounded-2xl p-4 relative">
+        <div className="flex w-full border-2 border-gold overflow-hidden rounded-2xl p-4 relative">
           {/* Left - Description */}
           <div className="flex items-center">
             <Card className="size-full bg-transparent border-none">
@@ -47,11 +47,11 @@ export default function Footer() {
             <DotBg/>
           </div>
           {/* Right - Placeholder for Image or Additional Content */}
-          <div className="flex items-center justify-center">
+          <div className="hidden items-center justify-center lg:flex">
             <img
-              src="/images/elevator-banner.jpg"
+              src="/images/hero-bg.jpg"
               alt="Elevator Banner"
-              className="w-full h-auto object-cover rounded-lg"
+              className="w-full h-auto object-cover rounded-md"
             />
           </div>
         </div>
