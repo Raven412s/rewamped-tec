@@ -4,6 +4,7 @@ import Quality from "@/app/(root)/(home)/_components/uspComponents/Quality";
 import Safety from "@/app/(root)/(home)/_components/uspComponents/Safety";
 import Technology from "@/app/(root)/(home)/_components/uspComponents/Technology";
 import { Lift } from "@/types";
+import { IconCalendar, IconFileSmile, IconGlobe, IconMap, IconTruck } from "@tabler/icons-react";
 
 export const umbrellaPoints = [
     {
@@ -114,40 +115,80 @@ export const images: string[] = [
   export const testimonials = [
     {
       id: 1,
-      title: "1000+",
+      title: "1000+ Lifts Installed",
       subtitle: "Lifts seamlessly installed worldwide, transforming vertical mobility by 100%",
-      videoSrc: "videos/testimonials/1.mp4",
-      imgSrc: "images/testimonials/1.jpg"
+      icon: <IconGlobe />,
+      header: (
+        <div className="relative size-full">
+          {/* Background Image */}
+          <img
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-0 opacity-100"
+            src={"images/testimonials/1.jpg"}
+            alt="Background"
+            style={{ background: "#171717" }}
+          />
+
+          {/* Hovered Video */}
+          <video
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-100 opacity-0"
+            src={"/videos/testimonials/1.mp4"}
+            autoPlay
+            loop
+            muted
+          />
+        </div>
+      ),
     },
     {
       id: 2,
-      title: "+95%",
+      title: "+95% Happy Customers",
       subtitle: "Over 95% of our customers experience enhanced convenience with our advanced elevator solutions",
-      videoSrc: "videos/video1.mp4",
-      imgSrc: "images/testimonials/2.jpg"
+      icon: <IconFileSmile />,
+      header:  (
+        <div className="relative size-full">
+          <img className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-0 opacity-100" src={"images/testimonials/2.jpg"} alt="Background" />
+          <video className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-100 opacity-0" src={"videos/video1.mp4"} autoPlay loop muted />
+        </div>
+      ),
     },
     {
       id: 3,
-      title: "1500+",
+      title: "1500+ Services Delivered",
       subtitle: "Reliable service excellence delivered with a 99% satisfaction rate, ensuring smooth operations",
-      videoSrc: "videos/video1.mp4",
-      imgSrc: "images/testimonials/3.avif"
+      icon: <IconTruck />,
+      header:  (
+        <div className="relative size-full">
+          <img className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-0 opacity-100" src={"images/testimonials/3.avif"} alt="Background" />
+          <video className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-100 opacity-0" src={ "videos/video1.mp4"} autoPlay loop muted />
+        </div>
+      ),
     },
     {
       id: 4,
-      title: "15+",
+      title: "Available in 15+ Countries",
       subtitle: "Serving 15+ countries with cutting-edge lift technology, setting new global standards",
-      videoSrc: "videos/video1.mp4",
-      imgSrc: "images/testimonials/4.jpg"
+      icon: <IconMap />,
+      header: (
+        <div className="relative size-full">
+          <img className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-0 opacity-100" src={"images/testimonials/4.jpg"} alt="Background" />
+          <video className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-100 opacity-0" src={ "videos/video1.mp4"} autoPlay loop muted />
+        </div>
+      ),
     },
     {
       id: 5,
       title: "10+ Years",
       subtitle: "A decade of innovation—100% commitment to precision engineering and safety",
-      videoSrc: "videos/video1.mp4",
-      imgSrc: "images/testimonials/5.jpg"
-    }
+      icon: <IconCalendar />,
+      header:(
+        <div className="relative size-full">
+          <img className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-0 opacity-100" src={"images/testimonials/5.jpg"} alt="Background" />
+          <video className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-100 opacity-0" src={"videos/video1.mp4"} autoPlay loop muted />
+        </div>
+      ),
+    },
   ];
+
 
 
   export const luxuryHomeLifts: Lift[] = [

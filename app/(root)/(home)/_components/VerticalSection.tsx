@@ -36,7 +36,7 @@ const VerticalSection = ({ title, description, src, keyUSPs, color, }: SectionPr
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden"
+    <div className="relative w-full h-screen overflow-hidden rounded-lg my-10"
     style={{
         backgroundColor: color
     }}
