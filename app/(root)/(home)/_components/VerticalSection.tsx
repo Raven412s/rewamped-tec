@@ -16,7 +16,7 @@ interface SectionProps {
   keyUSPs: string[];
 }
 
-const VerticalSection = ({ title, description, src, keyUSPs, color, text }: SectionProps) => {
+const VerticalSection = ({ title, description, src, keyUSPs, color, }: SectionProps) => {
   const imageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

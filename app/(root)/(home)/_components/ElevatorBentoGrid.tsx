@@ -1,16 +1,14 @@
 "use client";
 
-import React from "react";
-import {
-  IconShieldCheck,
-  IconBolt,
-  IconBrain,
-  IconBuildingSkyscraper,
-} from "@tabler/icons-react";
+import { BigDotsBg } from "@/components/Assets/BigDotsBg";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { FlipWords } from "@/components/ui/flip-words";
-import { DotBg } from "@/components/Assets/DotBg";
-import { BigDotsBg } from "@/components/Assets/BigDotsBg";
+import {
+    IconBolt,
+    IconBrain,
+    IconBuildingSkyscraper,
+    IconShieldCheck,
+} from "@tabler/icons-react";
 
 
 const ImageHeader = ({ src }: { src: string }) => (

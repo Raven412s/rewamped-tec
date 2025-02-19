@@ -1,14 +1,13 @@
-import Bounded from "@/components/HOC/Bounded";
-import Hero from "./_components/Hero";
-import { ElevatorBentoGrid } from "./_components/ElevatorBentoGrid";
 import Line from "@/components/Animated/Line";
 import LineContent1 from "@/components/Animated/LineContent1";
-import SmoothScroll from "@/components/Custom/SmoothParrallax/page";
-import PanImage from "./_components/PanImage";
-import { ReelsBento } from "./_components/ReelsBento";
 import { GridBg } from "@/components/Assets/GridBg";
 import CardParallax from "@/components/Custom/CardParalax/CardParalax";
+import SmoothScroll from "@/components/Custom/SmoothParrallax/page";
+import Bounded from "@/components/HOC/Bounded";
 import CardHorizontal from "./_components/CardHorizontal";
+import { ElevatorBentoGrid } from "./_components/ElevatorBentoGrid";
+import Hero from "./_components/Hero";
+import { ReelsBento } from "./_components/ReelsBento";
 
 export default function Home() {
   return (

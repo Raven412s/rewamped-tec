@@ -6,20 +6,19 @@ import {
     IconBrain,
     IconBuilding
 } from "@tabler/icons-react";
-import { Building } from "lucide-react";
 
 
-const VideoHeader = ({ src }: { src: string }) => (
-    <div className="w-full h-full min-h-[12rem] rounded-xl overflow-hidden">
-      <video
-        src={src}
-        loop
-        autoPlay
-        muted
-        className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-500"
-      />
-    </div>
-  );
+// const VideoHeader = ({ src }: { src: string }) => (
+//     <div className="w-full h-full min-h-[12rem] rounded-xl overflow-hidden">
+//       <video
+//         src={src}
+//         loop
+//         autoPlay
+//         muted
+//         className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-500"
+//       />
+//     </div>
+//   );
 
   const Skeleton = () => (
     <div className="w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
