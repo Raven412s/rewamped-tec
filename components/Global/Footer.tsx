@@ -3,6 +3,12 @@ import { RiTeamFill } from "react-icons/ri";
 import { DotBg } from "../Assets/DotBg";
 import QuotationDrawer from "../Custom/QuotationDrawer";
 import {
+    Modal,
+    ModalBody,
+    ModalContent,
+    ModalTrigger
+} from "../ui/animated-modal";
+import {
     Card,
     CardContent,
     CardDescription,
@@ -10,6 +16,7 @@ import {
     CardHeader,
     CardTitle,
 } from "../ui/card";
+import FAQAccordion from "../Animated/FAQAccordion";
 export default function Footer() {
   return (
     <section className=" h-full relative shadow-lg  w-full min-h-[400px] bg-neutral-900/10 backdrop-blur-sm border border-neutral-800  p-6 rounded-lg flex flex-col items-center text-center lg:text-left mt-4 lg:flex-row lg:items-stretch lg:justify-between">
@@ -48,7 +55,8 @@ export default function Footer() {
             <DotBg/>
           </div>
           {/* Right - Placeholder for Image or Additional Content */}
-          <div className="hidden items-center justify-center sm:justify-start lg:flex">
+          <div className="hidden items-center justify-center
+           sm:justify-start lg:flex">
             <img
               src="/images/hero-bg.jpg"
               alt="Elevator Banner"
@@ -80,24 +88,42 @@ export default function Footer() {
               {/* About Us */}
               <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
                 <div className="font-bold">About Us</div>
-                <span className="flex gap-2 flex-row items-center justify-center sm:justify-start"><FaBullseye /> Mission</span>
-                <span className="flex gap-2 flex-row items-center justify-center sm:justify-start"><FaBook /> Our Story</span>
-                <span className="flex gap-2 flex-row items-center justify-center sm:justify-start"><FaCamera /> Gallery</span>
-                <span className="flex gap-2 flex-row items-center justify-center sm:justify-start"><RiTeamFill />Our Team</span>
+                <span className="flex gap-2 flex-row items-center justify-center
+                 sm:justify-start"><FaBullseye /> Mission</span>
+                <span className="flex gap-2 flex-row items-center justify-center
+                 sm:justify-start"><FaBook /> Our Story</span>
+                <span className="flex gap-2 flex-row items-center justify-center
+                 sm:justify-start"><FaCamera /> Gallery</span>
+                <span className="flex gap-2 flex-row items-center justify-center
+                 sm:justify-start"><RiTeamFill />Our Team</span>
               </div>
 
               {/* Socials */}
               <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
                 <div className="font-bold">Socials</div>
-                <span className=" flex gap-2 flex-row items-center justify-center sm:justify-start"><FaFacebook /> Facebook</span>
-                <span className=" flex gap-2 flex-row items-center justify-center sm:justify-start"><FaInstagram /> Instagram</span>
-                <span className=" flex gap-2 flex-row items-center justify-center sm:justify-start"><FaWhatsapp /> WhatsApp</span>
+                <span className=" flex gap-2 flex-row items-center justify-center
+                 sm:justify-start"><FaFacebook /> Facebook</span>
+                <span className=" flex gap-2 flex-row items-center justify-center
+                 sm:justify-start"><FaInstagram /> Instagram</span>
+                <span className=" flex gap-2 flex-row items-center justify-center
+                 sm:justify-start"><FaWhatsapp /> WhatsApp</span>
               </div>
              {/* Support */}
              <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
                 <div className="font-bold">Support</div>
-                <span className="flex gap-2 flex-row items-center justify-center sm:justify-start"><FaEnvelope /> Contact</span>
-                <span className="flex gap-2 flex-row items-center justify-center sm:justify-start"><FaQuestionCircle /> FAQ's</span>
+                <span className="flex gap-2 flex-row items-center justify-center
+                 sm:justify-start"><FaEnvelope /> Contact</span>
+                    <Modal>
+                        <ModalTrigger className="p-0 m-0">
+                        <span className="flex gap-2 flex-row items-center justify-center
+                                sm:justify-start"><FaQuestionCircle /> FAQ's</span>
+                        </ModalTrigger>
+                        <ModalBody>
+                        <ModalContent>
+                                <FAQAccordion/>
+                        </ModalContent>
+                        </ModalBody>
+                    </Modal>
               </div>
              {/* CTA button */}
              <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
