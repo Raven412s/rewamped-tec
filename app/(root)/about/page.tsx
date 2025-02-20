@@ -10,16 +10,31 @@ import QuotationDrawer from "@/components/Custom/QuotationDrawer";
 import Bounded from "@/components/HOC/Bounded";
 
 const AboutPage = () => {
-  const carouselSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: true,
-  };
+    const carouselSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1024, // For tablets and smaller
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 640, // For mobile devices
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
+      };
+
 
   const whyUs = [
     "Prompt Delivery & Installation",
