@@ -44,42 +44,4 @@ export function TestimonialBento() {
   );
 }
 
-const gridItems = [
-  {
-    title: "Smart Elevators",
-    description: "AI-driven optimization for a smoother experience.",
-    header: <ImageHeader src="/images/product/felix.jpg" />,
-    className: "md:row-span-2 bg-background", // Vertical image
-  },
-  {
-    title: "Why Choose Us?",
-    description: "The best choice for safety, efficiency, and intelligence.",
-    header: (
-        <div className="size-full relative">
-            <FlipWords
-                 words={[
-                   "Safest Elevators in India",
-                   "Vaastu Compliant",
-                   "Energy Efficient",
-                   "Assisted by Alexa",
-                 ]}
-                 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-5xl font-black font-display capitalize bg-transparent"
-            />
-            <BigDotsBg/>
-        </div>
 
-    )
-  },
-  {
-    title: "Safety First",
-    description: "Advanced security features to protect every ride.",
-    header: <Skeleton />,
-    className: "md:row-span-2", // Vertical image
-  },
-  {
-    title: "Energy Efficient",
-    description: "Eco-friendly elevators reducing power consumption.",
-    header: <Skeleton />,
-
-  },
-];

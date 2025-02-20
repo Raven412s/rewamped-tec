@@ -3,6 +3,7 @@ import Innovative from "@/app/(root)/(home)/_components/uspComponents/Innovative
 import Quality from "@/app/(root)/(home)/_components/uspComponents/Quality";
 import Safety from "@/app/(root)/(home)/_components/uspComponents/Safety";
 import Technology from "@/app/(root)/(home)/_components/uspComponents/Technology";
+import { ProductCardProps } from "@/components/Custom/ProductCard";
 import { Lift } from "@/types";
 import { IconCalendar, IconFileSmile, IconGlobe, IconMap, IconTruck } from "@tabler/icons-react";
 
@@ -119,7 +120,7 @@ export const images: string[] = [
       subtitle: "Lifts seamlessly installed worldwide, transforming vertical mobility by 100%",
       icon: <IconGlobe />,
       header: (
-        <div className="relative size-full">
+        <div className="relative size-full min-h-[8rem] ">
           {/* Background Image */}
           <img
             className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-0 opacity-100"
@@ -145,7 +146,7 @@ export const images: string[] = [
       subtitle: "Over 95% of our customers experience enhanced convenience with our advanced elevator solutions",
       icon: <IconFileSmile />,
       header:  (
-        <div className="relative size-full">
+        <div className="relative size-full min-h-[8rem] ">
           <img className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-0 opacity-100" src={"images/testimonials/2.jpg"} alt="Background" />
           <video className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-100 opacity-0" src={"videos/video1.mp4"} autoPlay loop muted />
         </div>
@@ -157,7 +158,7 @@ export const images: string[] = [
       subtitle: "Reliable service excellence delivered with a 99% satisfaction rate, ensuring smooth operations",
       icon: <IconTruck />,
       header:  (
-        <div className="relative size-full">
+        <div className="relative size-full min-h-[8rem] ">
           <img className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-0 opacity-100" src={"images/testimonials/3.avif"} alt="Background" />
           <video className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-100 opacity-0" src={ "videos/video1.mp4"} autoPlay loop muted />
         </div>
@@ -169,7 +170,7 @@ export const images: string[] = [
       subtitle: "Serving 15+ countries with cutting-edge lift technology, setting new global standards",
       icon: <IconMap />,
       header: (
-        <div className="relative size-full">
+        <div className="relative size-full min-h-[8rem] ">
           <img className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-0 opacity-100" src={"images/testimonials/4.jpg"} alt="Background" />
           <video className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-100 opacity-0" src={ "videos/video1.mp4"} autoPlay loop muted />
         </div>
@@ -181,7 +182,7 @@ export const images: string[] = [
       subtitle: "A decade of innovation—100% commitment to precision engineering and safety",
       icon: <IconCalendar />,
       header:(
-        <div className="relative size-full">
+        <div className="relative size-full min-h-[8rem] ">
           <img className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-0 opacity-100" src={"images/testimonials/5.jpg"} alt="Background" />
           <video className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-100 opacity-0" src={"videos/video1.mp4"} autoPlay loop muted />
         </div>
@@ -197,54 +198,63 @@ export const images: string[] = [
       image: "/images/luxury/felix.jpg",
       description: "A sleek and elegant lift for modern homes, with silent operation and high energy efficiency.",
       features: ["Smooth ride", "Customizable interiors", "Compact design"],
-      type: "Hydraulic"
+      type: "Hydraulic",
+      moreInfo: "Felix is the perfect blend of sophistication and functionality. Designed for modern homes, this lift offers a whisper-quiet ride, ensuring absolute comfort and luxury. With customizable interiors, it seamlessly integrates into any architectural style, adding a touch of elegance while maximizing energy efficiency."
     },
     {
       name: "Felix-2.0",
       image: "/images/luxury/felix2.png",
       description: "An upgraded version of Felix with advanced safety features and enhanced capacity.",
       features: ["Enhanced safety", "Greater load capacity", "Eco-friendly technology"],
-      type: "Belt-Drive"
+      type: "Belt-Drive",
+      moreInfo: "Felix-2.0 is built for those who demand more from their home elevator. With state-of-the-art safety enhancements, an increased weight capacity, and eco-friendly technology, it ensures a seamless and secure experience. Whether for a luxurious penthouse or a modern villa, this lift redefines convenience and peace of mind."
     },
     {
       name: "Climber-X",
       image: "/images/luxury/climberx.png",
       description: "Engineered for luxury homes, combining aesthetics with high performance.",
       features: ["Aesthetic appeal", "High-speed motor", "Advanced control system"],
-      type: "Stair Lift"
+      type: "Stair Lift",
+      moreInfo: "Climber-X is the ultimate choice for homeowners who appreciate both beauty and performance. With its sleek design, high-speed motor, and intelligent control system, it transforms every ride into an effortless experience. Ideal for multi-story mansions, this lift adds a premium touch while ensuring smooth and reliable mobility."
     },
     {
-      name: "Vacuum-100",
+      name: "pneumatic-elevator",
       image: "/images/luxury/pneumatic.jpg",
       description: "A revolutionary design with no cables or pulleys, perfect for compact spaces.",
       features: ["Space-saving", "Modern technology", "Easy installation"],
-      type: "Pnuematic"
+      type: "Pneumatic",
+      moreInfo: "Vacuum-100 is a futuristic lift that redefines space efficiency. Its cutting-edge pneumatic technology eliminates the need for cables and pulleys, making it an ideal choice for homes with limited space. With a sleek, contemporary look and effortless installation, it offers a seamless and stylish vertical transportation experience."
     },
   ];
 
-  export  const commercialLifts: Lift[] = [
+
+  export const commercialLifts: Lift[] = [
     {
       name: "Elivio",
       image: "/images/commercial/elivio.jpg",
       description: "A reliable lift for commercial buildings with heavy usage and durability.",
       features: ["High capacity", "Durable design", "Optimized for efficiency"],
-      type: "Machine Room"
+      type: "Machine Room",
+      moreInfo: "Elivio is the perfect solution for commercial spaces requiring a robust and efficient elevator system. Engineered for high-traffic environments, it ensures seamless vertical mobility with minimal maintenance. With its high-capacity design and durable construction, Elivio is built to handle the demands of busy office buildings, malls, and business centers effortlessly."
     },
     {
       name: "Elivio-2.0",
       image: "/images/commercial/elivio2.jpg",
       description: "An advanced version of Elivio with improved speed and safety.",
       features: ["Faster operation", "Enhanced safety", "Smart monitoring"],
-      type: "Machine Room Less"
+      type: "Machine Room Less",
+      moreInfo: "Elivio-2.0 takes commercial lifting to the next level with cutting-edge technology and enhanced safety mechanisms. Featuring a machine-room-less design, it optimizes space while delivering faster travel speeds and energy efficiency. With its smart monitoring system, real-time diagnostics, and smooth performance, Elivio-2.0 is the future of modern commercial elevators."
     },
     {
       name: "Eleventra",
       image: "/images/commercial/eleventra.jpg",
       description: "Designed for high-rise buildings, offering exceptional performance and comfort.",
       features: ["Comfortable ride", "High-speed elevator", "Advanced durability"],
-      type: "Goods Lift"
+      type: "Goods Lift",
+      moreInfo: "Eleventra is built for high-rise commercial buildings, ensuring a high-speed, smooth, and secure ride for both passengers and freight. Designed to withstand rigorous usage, it combines cutting-edge engineering with a focus on user comfort. Whether in corporate towers, luxury hotels, or shopping complexes, Eleventra guarantees an efficient and elegant mobility experience."
     },
   ];
+
 
   export const productsData = [
     {
@@ -519,3 +529,44 @@ export const images: string[] = [
         image2: "shaft/withoutShaftTwo.webp"
     }
   ]
+
+ export const dataProductCard: ProductCardProps[] = [
+    {
+        type: "Hydraulic",
+        title: "Felix",
+        imageUrl: "/images/luxury/felix.jpg",
+        description: "A sleek and elegant lift for modern homes, with silent operation and high energy efficiency.",
+        moreInfo: "Designed for modern homes, Felix operates on a single-phase power supply, ensuring energy efficiency. Its compact design maximizes space without compromising luxury. Built with European engineering, it offers seamless vertical mobility with advanced safety features, making it a perfect blend of technology and elegance."
+    },
+    {
+        type: "Belt-Drive",
+        title: "Felix-2.0",
+        imageUrl: "/images/luxury/felix2.png",
+        description: "An upgraded version of Felix with advanced safety features and enhanced capacity.",
+        moreInfo: "Designed for modern homes, Felix operates on a single-phase power supply, ensuring energy efficiency. Its compact design maximizes space without compromising luxury. Built with European engineering, it offers seamless vertical mobility with advanced safety features, making it a perfect blend of technology and elegance."
+    },
+    {
+        type: "Machine Room",
+        title: "Elivio",
+        imageUrl: "/images/commercial/elivio.jpg",
+        description: "A reliable lift for commercial buildings with heavy usage and durability.",
+        moreInfo: "Designed for modern homes, Felix operates on a single-phase power supply, ensuring energy efficiency. Its compact design maximizes space without compromising luxury. Built with European engineering, it offers seamless vertical mobility with advanced safety features, making it a perfect blend of technology and elegance."
+    },
+  ]
+{/* <Bounded className="">
+        <h2 className="text-6xl font-bold mb-4  bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold bg-neutral-950 gold-hover-btn">Choose Your Preferred Structure</h2>
+        <div className="flex flex-col  w-full gap-6 justify-center">
+             {preferences.map((preference, index)=>(
+            <ProductLayout
+                key={index}
+                title={preference.title}
+                description={preference.description}
+                image1={preference.image1}
+                image2={preference.image2}
+                />
+             ))}
+        </div>
+      </Bounded> */}
+    {/* <section id="products">
+      <ProductsPage />
+    </section> */}

@@ -35,7 +35,7 @@ export default function CardParallax() {
       {/* Animate the opacity of the heading */}
       <motion.h1
         style={{ opacity }}
-        className="sticky top-16 font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase text-center mb-10  bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold/90 to-neutral-900/70"
+        className="sticky top-16 font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase text-center mb-10  bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150"
       >
         WHAT MAKES US DIFFERENT
       </motion.h1>

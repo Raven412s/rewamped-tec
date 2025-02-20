@@ -29,6 +29,7 @@ export type Lift = {
     description: string;
     features: string[];
     type: string;
+    moreInfo: string
   };
 
   export interface TemplateProps {

@@ -1,20 +1,21 @@
-import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../ui/card";
+import { FaBook, FaBullseye, FaCamera, FaEnvelope, FaFacebook, FaInstagram, FaQuestionCircle, FaWhatsapp } from "react-icons/fa";
+import { RiTeamFill } from "react-icons/ri";
 import { DotBg } from "../Assets/DotBg";
-
+import QuotationDrawer from "../Custom/QuotationDrawer";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "../ui/card";
 export default function Footer() {
   return (
-    <section className=" h-full  p-5">
-      <div className="flex flex-col size-full p-3 gap-6">
+    <section className=" h-full relative shadow-lg  w-full min-h-[400px] bg-neutral-900/10 backdrop-blur-sm border border-neutral-800  p-6 rounded-lg flex flex-col items-center text-center lg:text-left mt-4 lg:flex-row lg:items-stretch lg:justify-between">
+      <div className="flex flex-col size-full p-3 gap-6 ">
         {/* Top Section */}
-        <div className="flex w-full border-2 border-gold overflow-hidden rounded-2xl p-4 relative">
+        <div className="flex w-full border-2 border-gold z-20 overflow-hidden rounded-2xl p-4 relative">
           {/* Left - Description */}
           <div className="flex items-center">
             <Card className="size-full bg-transparent border-none">
@@ -47,7 +48,7 @@ export default function Footer() {
             <DotBg/>
           </div>
           {/* Right - Placeholder for Image or Additional Content */}
-          <div className="hidden items-center justify-center lg:flex">
+          <div className="hidden items-center justify-center sm:justify-start lg:flex">
             <img
               src="/images/hero-bg.jpg"
               alt="Elevator Banner"
@@ -57,9 +58,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row gap-4 items-center justify-between h-auto">
-          {/* Logo Section */}
-          <div className="w-2/3 flex items-center justify-start">
+        <div className="relative w-full">
+        <div className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150 py-2 absolute left-1/2 -translate-x-1/2 top-0 w-full uppercase tracking-wide">
+              The Elevator Company
+            </div>
+        <div className="pt-16 flex flex-col md:flex-row gap-4 items-center justify-between h-auto ">
+                      {/* Logo Section */}
+          <div className=" flex items-center justify-start ">
             <div className="w-64 aspect-square">
               <img
                 src="/images/the-elevator-company.png"
@@ -70,33 +75,38 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <div className="w-1/3 flex flex-col justify-start gap-6">
-            <div className="text-4xl text-right font-semibold">
-              The Elevator Company
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
+          <div className="w-4/5 flex flex-col justify-start gap-6 ">
+            <div className="grid grid-cols-1 sm:grid-cols-3  md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center justify-items-stretch">
               {/* About Us */}
               <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
                 <div className="font-bold">About Us</div>
-                <span>Mission</span>
-                <span>Our Story</span>
-                <span>Gallery</span>
+                <span className="flex gap-2 flex-row items-center justify-center sm:justify-start"><FaBullseye /> Mission</span>
+                <span className="flex gap-2 flex-row items-center justify-center sm:justify-start"><FaBook /> Our Story</span>
+                <span className="flex gap-2 flex-row items-center justify-center sm:justify-start"><FaCamera /> Gallery</span>
+                <span className="flex gap-2 flex-row items-center justify-center sm:justify-start"><RiTeamFill />Our Team</span>
               </div>
-              {/* Support */}
-              <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
-                <div className="font-bold">Support</div>
-                <span>Contact</span>
-                <span>FAQ's</span>
-              </div>
+
               {/* Socials */}
               <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
                 <div className="font-bold">Socials</div>
-                <span>Facebook</span>
-                <span>Instagram</span>
-                <span>WhatsApp</span>
+                <span className=" flex gap-2 flex-row items-center justify-center sm:justify-start"><FaFacebook /> Facebook</span>
+                <span className=" flex gap-2 flex-row items-center justify-center sm:justify-start"><FaInstagram /> Instagram</span>
+                <span className=" flex gap-2 flex-row items-center justify-center sm:justify-start"><FaWhatsapp /> WhatsApp</span>
+              </div>
+             {/* Support */}
+             <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
+                <div className="font-bold">Support</div>
+                <span className="flex gap-2 flex-row items-center justify-center sm:justify-start"><FaEnvelope /> Contact</span>
+                <span className="flex gap-2 flex-row items-center justify-center sm:justify-start"><FaQuestionCircle /> FAQ's</span>
+              </div>
+             {/* CTA button */}
+             <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
+                <div className="font-bold">Get Your Quotation Today:</div>
+                <QuotationDrawer/>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

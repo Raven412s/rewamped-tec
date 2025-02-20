@@ -9,7 +9,7 @@ import { TiLocationArrow } from "react-icons/ti";
 import { useWindowScroll } from "react-use";
 import QuotationDrawer from "@/components/Custom/QuotationDrawer"
 
-const navItems = ["Gallery", "About"];
+const navItems = ["Home","Gallery", "About"];
 
 const Navbar = () => {
   const navContainerRef = useRef<HTMLDivElement>(null);
@@ -69,13 +69,19 @@ const router = useRouter()
                       {/* Desktop Navigation Links */}
           <div className="hidden lg:flex gap-6 items-center ">
             {navItems.map((item) => (
-              <Link
+                item === "Home" ? (<Link
+                    href={`/`}
+                    key={item}
+                    className="nav-hover-btn min-w-max !text-sm"
+                  >
+                    {item}
+                  </Link>):(<Link
                 href={`/${item.toLowerCase()}`}
                 key={item}
                 className="nav-hover-btn min-w-max !text-sm"
               >
                 {item}
-              </Link>
+              </Link>)
             ))}
             <QuotationDrawer/>
           </div>
@@ -101,14 +107,20 @@ const router = useRouter()
                   <p className="text-lg font-bold">The Elevator Company</p>
                 </div>
                 {navItems.map((item) => (
-                  <Link
-                    href={`/${item.toLowerCase()}`}
+                item === "Home" ? (<Link
+                    href={`/`}
                     key={item}
-                    className=" text-lg hover:underline"
+                    className="nav-hover-btn min-w-max !text-sm"
                   >
                     {item}
-                  </Link>
-                ))}
+                  </Link>):(<Link
+                href={`/${item.toLowerCase()}`}
+                key={item}
+                className="nav-hover-btn min-w-max !text-sm"
+              >
+                {item}
+              </Link>)
+            ))}
                 <Rounded>
                   <p onClick={handleProductsClick} className="flex gap-3 items-center justify-start">
                     Products <TiLocationArrow />
@@ -118,10 +130,6 @@ const router = useRouter()
               </SheetContent>
             </Sheet>
           </div>
-
-
-
-
         </nav>
       </header>
     </div>

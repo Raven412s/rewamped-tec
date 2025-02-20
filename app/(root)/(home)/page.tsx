@@ -12,6 +12,7 @@ import ServicesGrid from "./_components/ServicesGrid";
 import Innovative from "./_components/uspComponents/Innovative";
 import { umbrellaPoints } from "@/data";
 import { TestimonialBento } from "./_components/TestimonialBento";
+import OurProducts from "../products/_components/OurProducts";
 
 export default function Home() {
   return (
@@ -23,11 +24,12 @@ export default function Home() {
     <Line gap='my-2' />
      <LineContent1/>
     <Line gap='my-2' />
+    <OurProducts/>
     <SmoothScroll/>
     <div className="relative">
         <GridBg >
             <Bounded className=" relative min-h-screen w-full  ">
-                <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase text-center mb-10  bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold/90 to-neutral-900/70">
+                <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase text-center mb-10  bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150">
                 Elevators of the Future
                 </h1>
                 <ReelsBento/>
@@ -38,7 +40,7 @@ export default function Home() {
     <CardParallax/>
     <Bounded className="relative lg:hidden z-20   min-h-screen w-full flex flex-col ">
     <h1
-        className=" font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase text-center mb-10  bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold/90 to-neutral-900/70"
+        className=" font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase text-center mb-10  bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150"
       >
         WHAT MAKES US DIFFERENT
       </h1>
@@ -53,14 +55,14 @@ export default function Home() {
 
     <GridBg>
     <Bounded className=" relative min-h-screen w-full  ">
-        <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase text-center mb-10  bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold/90 to-neutral-900/70">
+        <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase text-center mb-10  bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150">
         Our Services
         </h1>
         <ServicesGrid/>
     </Bounded>
     </GridBg>
     <Bounded className=" relative min-h-screen w-full  ">
-        <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase text-center mb-10  bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold/90 to-neutral-900/70">
+        <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase text-center mb-10  bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150">
         Testimonials
         </h1>
         <TestimonialBento/>
