@@ -546,11 +546,11 @@ export const images: string[] = [
         moreInfo: "Designed for modern homes, Felix operates on a single-phase power supply, ensuring energy efficiency. Its compact design maximizes space without compromising luxury. Built with European engineering, it offers seamless vertical mobility with advanced safety features, making it a perfect blend of technology and elegance."
     },
     {
-        type: "Machine Room",
-        title: "Elivio",
-        imageUrl: "/images/commercial/elivio.jpg",
-        description: "A reliable lift for commercial buildings with heavy usage and durability.",
-        moreInfo: "Designed for modern homes, Felix operates on a single-phase power supply, ensuring energy efficiency. Its compact design maximizes space without compromising luxury. Built with European engineering, it offers seamless vertical mobility with advanced safety features, making it a perfect blend of technology and elegance."
+        type: "Machine Room Less",
+        title: "Elivio-2.0",
+        imageUrl: "/images/commercial/elivio2.jpg",
+        description: "An advanced version of Elivio with improved speed and safety.",
+        moreInfo: "Elivio-2.0 takes commercial lifting to the next level with cutting-edge technology and enhanced safety mechanisms. Featuring a machine-room-less design, it optimizes space while delivering faster travel speeds and energy efficiency. With its smart monitoring system, real-time diagnostics, and smooth performance, Elivio-2.0 is the future of modern commercial elevators"
     },
   ]
 {/* <Bounded className="">
