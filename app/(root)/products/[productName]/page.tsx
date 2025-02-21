@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     console.log("og Image:", product?.ogImage)
     if (!product) {
       return {
-        title: "Product Not Found",
+        title: "Product Not Found - The Elevator Company",
         description: "The product you are looking for does not exist.",
         openGraph: {
           type: "website",
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     }
 
     return {
-      title: `${product.productTitle}`,
+      title: `${product.productTitle} - The Elevator Company`,
       description: product.productDescription,
       openGraph: {
         type: "website",
