@@ -65,6 +65,8 @@ export default function ProductPage({ params }: ProductPageProps) {
 
   return (
     <ProductDetails
+    ogImage=""
+    ogImageAltText=""
       carouselImages={product.carouselImages}
       productTitle={product.productTitle}
       productDescription={product.productDescription}
