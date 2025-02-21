@@ -1,93 +1,140 @@
-import QuotationDrawer from "@/components/Custom/QuotationDrawer";
 import Bounded from "@/components/HOC/Bounded";
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel";
 import { ProductDetailsProps } from "@/types";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+import { BigDotsBg } from "@/components/Assets/BigDotsBg";
+const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
+const Skeleton = () => (
+  <div className="w-full h-full min-h-[6rem] rounded-md bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
+);
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({
-  images,
-  title,
-  description,
-  features,
-  specialFeature,
-}) => {
-  return (
-<Bounded className="">
-    <h1 className="mt-32  text-2xl sm:text-3xl lg:text-6xl font-bold mb-4 w-full text-left text-golden-400 ">
-      {title} :
-    </h1>
-<div className="flex flex-wrap w-full min-h-screen   relative text-white">
-      {/* Left: Carousel */}
-      <div className="w-full lg:w-2/4 p-4 flex justify-center items-start lg:sticky top-20 h-auto lg:h-[calc(100vh-4rem)]">
-        <Carousel className="w-full max-w-md sm:max-w-lg p-0 ">
-          <CarouselContent>
-            {images.map((image, index) => (
-              <CarouselItem key={index} >
-                <div className="p-2">
-                  <Card className="bg-[url(/images/pattern.png)] relative bg-cover bg-no-repeat">
-                  <div className="absolute inset-0 bg-black opacity-60"></div>
-                    <CardContent className="flex aspect-square items-center relative z-10 justify-center p-4 sm:p-6">
+    heroHeading,
+    heroImage,
+    carouselImages,
+    productDescription,
+    productFeatures,
+    productMiniHeading,
+    productSubHeading,
+    productTitle,
+    productSpecialFeature,
+    sections,
+  }) => {
+    return (
+      <>
+        <div className="relative w-full h-[500px] flex items-center justify-center text-white mt-20">
+          {heroImage ? (
+            <img
+              src={heroImage}
+              alt="Hero"
+              className="absolute inset-0 z-0 w-full h-full object-contain"
+            />
+          ) : (
+            <Skeleton />
+          )}
+          <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-4xl font-bold text-center">
+            {heroHeading}
+          </h1>
+        </div>
 
-                     <Image
-                        src={image}
-                        alt={`${title}-image-${index}`}
-                        width={500}
-                        height={500}
-                        className="w-full max-h-[20rem] sm:max-h-[25rem] md:max-h-[27rem] flex aspect-square items-center relative z-10 justify-center p-4 sm:p-6 object-contain rounded-lg"
-                      />
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="flex justify-center "><QuotationDrawer triggerText="Contact Now" /></div>
-          <CarouselPrevious className="md:flex hidden" />
-          <CarouselNext className="md:flex hidden" />
-        </Carousel>
-      </div>
-
-      {/* Right: Product Details */}
-      <div className="w-full lg:w-2/4 py-6 px-4 sm:px-6 md:px-10">
-      <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-golden-400 underline">
-          Description:
-        </h2>
-        <p className="mb-6 text-sm sm:text-base text-muted-foreground">
-          {description}
-        </p>
-
-        <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-golden-400 underline">
-          Features:
-        </h2>
-        <ul className="list-disc list-inside text-muted-foreground text-sm sm:text-base mb-6 space-y-2">
-          {features.map((feature, index) => (
-            <li key={index}>{feature}</li>
-          ))}
-        </ul>
-
-        {specialFeature && (
-          <div className="mt-6">
-            <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-golden-400 underline">
-              Special Feature:
-            </h2>
-            <p className="text-sm sm:text-base text-muted-foreground">{specialFeature}</p>
+        <Bounded className="space-y-16">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="w-full md:w-1/2">
+              {carouselImages[0] ? (
+                <img
+                  src={carouselImages[0]}
+                  alt="Product Image"
+                  className="rounded-md  w-full h-auto max-h-[200px] md:max-h-[250px] lg:max-h-[350px] xl:max-h-[400px]  object-contain"
+                />
+              ) : (
+                <Skeleton />
+              )}
+            </div>
+            <div className="w-full md:w-1/2 space-y-4">
+              <h2 className="text-3xl font-semibold text-gold brightness-150">{productTitle} - {productSubHeading}</h2>
+              <p>{productDescription}</p>
+            </div>
           </div>
-        )}
-      </div>
-      <BackgroundBeams/>
-    </div>
-</Bounded>
-  );
-};
+        </Bounded>
 
-export default ProductDetails;
+        <Bounded>
+          <div className="space-y-6">
+            <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl capitalize py-2 text-center bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150 pb-10">
+              Features
+            </h2>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="w-full md:w-1/2">
+                {carouselImages[1] ? (
+                  <img
+                    src={carouselImages[1]}
+                    alt="Features Image"
+                    className="rounded-md  w-full h-auto max-h-[200px] md:max-h-[250px] lg:max-h-[350px] xl:max-h-[400px]  object-contain"
+                  />
+                ) : (
+                  <Skeleton />
+                )}
+              </div>
+              <ul className="w-full md:w-1/2 space-y-2 list-disc list-inside">
+                {productFeatures.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Bounded>
+
+        <h2 className="text-4xl font-bold text-center py-4 text-gold brightness-150">
+          Next-Gen Elevators for Ultimate Performance
+        </h2>
+
+        <Bounded className="space-y-16">
+          {sections.map((section, index) => (
+            <div
+              key={index}
+              className={`flex flex-col ${
+                index % 2 === 0
+                  ? "md:flex-row bg-foreground/90 text-background "
+                  : "md:flex-row-reverse"
+              } items-center gap-8 lg:max-h-[50vh] xl:max-h-[50vh] overflow-hidden px-10 py-10 relative my-10`}
+            >
+              <div className="w-full md:w-1/2 md:block hidden">
+                {section.image ? (
+                  <img
+                    src={section.image}
+                    alt={`Section ${index + 1}`}
+                    className="rounded-md  w-full h-auto max-h-[200px] md:max-h-[250px] lg:max-h-[350px] xl:max-h-[400px]  object-contain"
+                  />
+                ) : (
+                  <Skeleton />
+                )}
+              </div>
+              <div className="w-full md:w-1/2 space-y-3 text-center md:text-left">
+                <h3 className={`text-2xl font-semibold text-gold  ${
+                index % 2 === 0
+                  ? "brightness-100"
+                  : "brightness-150"
+              }`}>{section.subHeading}</h3>
+                <div className="w-full md:w-1/2 md:hidden block">
+                {section.image ? (
+                  <img
+                    src={section.image}
+                    alt={`Section ${index + 1}`}
+                    className="rounded-md  w-full h-auto max-h-[200px] md:max-h-[250px] lg:max-h-[350px] xl:max-h-[400px]  object-contain"
+                  />
+                ) : (
+                  <Skeleton />
+                )}
+              </div>
+                <p>{section.description}</p>
+              </div>
+              <BigDotsBg/>
+            </div>
+          ))}
+        </Bounded>
+      </>
+    );
+  };
+
+  export default ProductDetails;

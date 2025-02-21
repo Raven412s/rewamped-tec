@@ -8,8 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 import { useWindowScroll } from "react-use";
 import QuotationDrawer from "@/components/Custom/QuotationDrawer"
-
-const navItems = ["Home","Gallery", "About"];
+const navItems = ["Home", "Gallery", "About Us", ];
 
 const Navbar = () => {
   const navContainerRef = useRef<HTMLDivElement>(null);
@@ -76,12 +75,13 @@ const router = useRouter()
                   >
                     {item}
                   </Link>):(<Link
-                href={`/${item.toLowerCase()}`}
-                key={item}
-                className="nav-hover-btn min-w-max !text-sm"
-              >
-                {item}
-              </Link>)
+                    href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                    key={item}
+                    className="nav-hover-btn min-w-max !text-sm"
+                    >
+                    {item}
+                    </Link>
+                    )
             ))}
             <QuotationDrawer/>
           </div>

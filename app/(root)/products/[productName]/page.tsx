@@ -15,11 +15,16 @@ export default function ProductPage({ params }: { params: { productName: string 
 
   return (
     <ProductDetails
-      images={product.images}
-      title={product.productTitle}
-      description={product.productDescription}
-      features={product.productFeatures}
-      specialFeature={product.productSpecialFeature}
-    />
+      carouselImages={product.carouselImages}
+      productTitle={product.productTitle}
+      productDescription={product.productDescription}
+      productFeatures={product.productFeatures}
+      productSpecialFeature={product.productSpecialFeature}
+      heroImage={product.heroImage}
+      heroHeading={product.heroHeading}
+      sections={product.sections}
+      productSubHeading={product.productSubHeading}
+      productMiniHeading={product.productMiniHeading}
+      />
   );
 }

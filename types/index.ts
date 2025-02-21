@@ -94,11 +94,16 @@ export interface MouseEvent {
   }
 
   export interface ProductDetailsProps {
-  images: string[];
-  title: string;
-  description: string;
-  features: string[];
-  specialFeature?: string;
+    heroHeading: string,
+    heroImage: string,
+    productTitle: string;
+    productSubHeading: string,
+    productMiniHeading: string
+    productDescription: string;
+    carouselImages: string[];
+    productFeatures: string[];
+    productSpecialFeature: string;
+    sections: {image: string, subHeading: string, description: string}[]
 }
 
 export interface usp {
