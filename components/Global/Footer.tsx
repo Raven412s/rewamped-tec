@@ -99,8 +99,8 @@ export default function Footer() {
                 <Link href={"/gallery"} >
                 <span className="flex gap-2 flex-row items-center justify-center
                  sm:justify-start"><FaCamera /> Gallery</span></Link>
-                <span className="flex gap-2 flex-row items-center justify-center
-                 sm:justify-start"><RiTeamFill />Our Team</span>
+                {/* <span className="flex gap-2 flex-row items-center justify-center
+                 sm:justify-start"><RiTeamFill />Our Team</span> */}
               </div>
 
               {/* Socials */}

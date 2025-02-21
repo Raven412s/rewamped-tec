@@ -3,7 +3,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import NavFooterWrapper from "@/components/HOC/NavFooterWrapper";
 import { Montserrat, Red_Hat_Display } from 'next/font/google'
-
+import { Analytics } from "@vercel/analytics/react"
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -35,6 +35,7 @@ export default function RootLayout({
         <NavFooterWrapper>
             {children}
         </NavFooterWrapper>
+        <Analytics/>
       </body>
     </html>
   );

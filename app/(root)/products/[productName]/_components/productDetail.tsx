@@ -4,10 +4,11 @@ import React from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { BigDotsBg } from "@/components/Assets/BigDotsBg";
+import { SmallGridBg } from "@/components/Assets/SmallGridBg";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 const Skeleton = () => (
-  <div className="w-full h-full min-h-[6rem] rounded-md bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
+  <div className="w-full h-full min-h-[6rem]  bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
 );
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({
@@ -24,7 +25,8 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
   }) => {
     return (
       <>
-        <div className="relative w-full h-[500px] flex items-center justify-center text-white mt-20">
+    <SmallGridBg>
+    <div className="relative w-full h-[500px] flex items-center justify-center text-white mt-20">
           {heroImage ? (
             <img
               src={heroImage}
@@ -58,7 +60,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
             </div>
           </div>
         </Bounded>
-
         <Bounded>
           <div className="space-y-6">
             <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl capitalize py-2 text-center bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150 pb-10">
@@ -84,7 +85,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
             </div>
           </div>
         </Bounded>
-
         <h2 className="text-4xl font-bold text-center py-4 text-gold brightness-150">
           Next-Gen Elevators for Ultimate Performance
         </h2>
@@ -95,9 +95,9 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
               key={index}
               className={`flex flex-col ${
                 index % 2 === 0
-                  ? "md:flex-row bg-foreground/90 text-background "
-                  : "md:flex-row-reverse"
-              } items-center gap-8 lg:max-h-[50vh] xl:max-h-[50vh] overflow-hidden px-10 py-10 relative my-10`}
+                  ? "md:flex-row bg-gray-200/70 text-background border-muted-foreground "
+                  : "md:flex-row-reverse border-gold/50"
+              } items-center gap-8 lg:max-h-[50vh] xl:max-h-[50vh] overflow-hidden px-10 py-10 relative my-10 rounded-xl border-2`}
             >
               <div className="w-full md:w-1/2 md:block hidden">
                 {section.image ? (
@@ -113,7 +113,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
               <div className="w-full md:w-1/2 space-y-3 text-center md:text-left">
                 <h3 className={`text-2xl font-semibold text-gold  ${
                 index % 2 === 0
-                  ? "brightness-100"
+                  ? "brightness-150"
                   : "brightness-150"
               }`}>{section.subHeading}</h3>
                 <div className="w-full md:w-1/2 md:hidden block">
@@ -133,6 +133,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
             </div>
           ))}
         </Bounded>
+    </SmallGridBg>
       </>
     );
   };
