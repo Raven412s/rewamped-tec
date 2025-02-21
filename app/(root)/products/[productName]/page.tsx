@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
       openGraph: {
         type: "website",
         url: `${siteDomain}/products/${params.productName}`,
-        title: `${product.productTitle} - The Elevator Company`,
+        title: `${product.productTitle} - Product - The Elevator Company`,
         description: product.productDescription,
         images: [
           {
