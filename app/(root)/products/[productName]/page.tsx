@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     }
 
     return {
-      title: `${product.productTitle} | Your Company Name`,
+      title: `${product.productTitle}`,
       description: product.productDescription,
       openGraph: {
         type: "website",
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
               : `${siteDomain}${product.heroImage || "/opengraph-image.png"}`,
             width: 1200,
             height: 630,
-            alt: product.productTitle,
+            alt: product.heroHeading,
           },
         ],
       },
