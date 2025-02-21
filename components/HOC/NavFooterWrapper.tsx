@@ -6,7 +6,9 @@ const NavFooterWrapper = ({children}: PropsWithChildren) => {
   return (
     <div>
         <Navbar/>
+        <section className='min-h-screen'>
         {children}
+        </section>
         <Footer/>
     </div>
   )

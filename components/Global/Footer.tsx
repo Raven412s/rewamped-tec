@@ -1,13 +1,10 @@
-import { FaBook, FaBullseye, FaCamera, FaEnvelope, FaFacebook, FaInstagram, FaQuestionCircle, FaWhatsapp } from "react-icons/fa";
+"use client"
+import Link from "next/link";
+import { useState } from "react";
+import { FaBook, FaCamera, FaEnvelope, FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { RiTeamFill } from "react-icons/ri";
 import { DotBg } from "../Assets/DotBg";
 import QuotationDrawer from "../Custom/QuotationDrawer";
-import {
-    Modal,
-    ModalBody,
-    ModalContent,
-    ModalTrigger
-} from "../ui/animated-modal";
 import {
     Card,
     CardContent,
@@ -16,8 +13,17 @@ import {
     CardHeader,
     CardTitle,
 } from "../ui/card";
-import FAQAccordion from "../Animated/FAQAccordion";
+import FAQModal from "./FAQModal";
 export default function Footer() {
+    const [copied, setCopied] = useState(false);
+    const email = "vikas@thelevatorcompany.com"; // Replace with your email
+
+    const handleCopy = () => {
+      navigator.clipboard.writeText(email).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000); // Reset after 2 sec
+      });
+    };
   return (
     <section className=" h-full relative shadow-lg  w-full min-h-[400px] bg-neutral-900/10 backdrop-blur-sm border border-neutral-800  p-6 rounded-lg flex flex-col items-center text-center lg:text-left mt-4 lg:flex-row lg:items-stretch lg:justify-between">
       <div className="flex flex-col size-full p-3 gap-6 ">
@@ -88,12 +94,11 @@ export default function Footer() {
               {/* About Us */}
               <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
                 <div className="font-bold">About Us</div>
+                <Link href={"/about#our-story"} ><span className="flex gap-2 flex-row items-center justify-center
+                 sm:justify-start"><FaBook /> Our Story</span></Link>
+                <Link href={"/gallery"} >
                 <span className="flex gap-2 flex-row items-center justify-center
-                 sm:justify-start"><FaBullseye /> Mission</span>
-                <span className="flex gap-2 flex-row items-center justify-center
-                 sm:justify-start"><FaBook /> Our Story</span>
-                <span className="flex gap-2 flex-row items-center justify-center
-                 sm:justify-start"><FaCamera /> Gallery</span>
+                 sm:justify-start"><FaCamera /> Gallery</span></Link>
                 <span className="flex gap-2 flex-row items-center justify-center
                  sm:justify-start"><RiTeamFill />Our Team</span>
               </div>
@@ -103,27 +108,26 @@ export default function Footer() {
                 <div className="font-bold">Socials</div>
                 <span className=" flex gap-2 flex-row items-center justify-center
                  sm:justify-start"><FaFacebook /> Facebook</span>
+                <Link href={"https://www.instagram.com/thelevatorcompany?igsh=b3B0YzQ5Y3ZiN3hi"} target="_blank">
                 <span className=" flex gap-2 flex-row items-center justify-center
                  sm:justify-start"><FaInstagram /> Instagram</span>
+                </Link>
+                <Link href={"https://wa.me/+919310229056?text=Hello%20there!%20I%20wanted%20to%20contact%20you."} target="_blank" >
                 <span className=" flex gap-2 flex-row items-center justify-center
                  sm:justify-start"><FaWhatsapp /> WhatsApp</span>
+                </Link>
               </div>
              {/* Support */}
              <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
                 <div className="font-bold">Support</div>
-                <span className="flex gap-2 flex-row items-center justify-center
-                 sm:justify-start"><FaEnvelope /> Contact</span>
-                    <Modal>
-                        <ModalTrigger className="p-0 m-0">
-                        <span className="flex gap-2 flex-row items-center justify-center
-                                sm:justify-start"><FaQuestionCircle /> FAQ's</span>
-                        </ModalTrigger>
-                        <ModalBody>
-                        <ModalContent>
-                                <FAQAccordion/>
-                        </ModalContent>
-                        </ModalBody>
-                    </Modal>
+                <span
+                  onClick={handleCopy}
+                  className="flex gap-2 flex-row items-center justify-center sm:justify-start cursor-pointer text-white"
+                >
+                  <FaEnvelope />
+                  {copied ? "Mail Copied!" : "Contact"}
+                </span>
+                <span><FAQModal/></span>
               </div>
              {/* CTA button */}
              <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">

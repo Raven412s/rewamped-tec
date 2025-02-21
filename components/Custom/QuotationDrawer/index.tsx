@@ -31,7 +31,7 @@ const formSchema = z
     fullName: z.string().min(3, "Full Name must be at least 3 characters long"),
     email: z.string().email("Invalid email address"),
     phone: z.string().min(10, "Phone number must be at least 10 digits"),
-    pinCode: z.string().regex(/^\d{6}$/, "Pin Code must be exactly 6 digits"), // Pin Code validation
+    location: z.string().min(3, "Location name must be at least 3 characters long"),
     floors: z.string().min(1, "Please select the number of floors"),
     otherFloor: z.string().optional(),
     message: z.string().min(5, "Message must be at least 5 characters long"),
@@ -95,7 +95,8 @@ export default function QuotationDrawer({
             >
               <form
                 className="w-full flex flex-col space-y-4"
-                onSubmit={handleSubmit((data) => onSubmit(data, setOpen))}
+                action={"https://formspree.io/f/mgvoddzr"}
+                method="POST"
               >
                 {/* Form Fields */}
                 <div className="flex flex-col space-y-3">
@@ -136,20 +137,21 @@ export default function QuotationDrawer({
 
                   {/* Pin Code */}
                   <div className="flex flex-col md:flex-row md:items-center gap-3">
-                    <Label className="md:w-1/3 text-white">Pin Code</Label>
+                    <Label className="md:w-1/3 text-white">Location</Label>
                     <Input
                       type="text"
-                      placeholder="Enter your pin code"
-                      {...register("pinCode")}
+                      placeholder="Enter your Location"
+                      {...register("location")}
                       className="w-full"
                     />
                   </div>
-                  <p className="text-red-500 text-sm">{errors.pinCode?.message?.toString()}</p>
+                  <p className="text-red-500 text-sm">{errors.location?.message?.toString()}</p>
 
                   {/* Floors */}
                   <div className="flex flex-col md:flex-row md:items-center gap-3">
                     <Label className="md:w-1/3 text-white">Number of Floors</Label>
                     <Select
+                    name="floors"
                       onValueChange={(value) => {
                         setValue("floors", value);
                         setFloorType(value);

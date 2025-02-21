@@ -1,16 +1,15 @@
-'use client';
-import Image from 'next/image';
-import styles from './style.module.scss';
-import { useTransform, motion, useScroll } from 'framer-motion';
-import { useRef, FC } from 'react';
-import { CardProps } from '@/types';
+"use client";
+import Image from "next/image";
+import { useTransform, motion, useScroll } from "framer-motion";
+import { useRef, FC } from "react";
+import { CardProps } from "@/types";
+import Link from "next/link";
 
 const Card: FC<CardProps> = ({
   i,
   title,
   description,
   src,
-  url,
   color,
   progress,
   range,
@@ -21,70 +20,47 @@ const Card: FC<CardProps> = ({
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ['start end', 'start start'],
+    offset: ["start end", "start start"],
   });
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={container} className={`${styles.cardContainer}`}>
-
+    <div ref={container} className="h-[calc(110vh+10rem)] flex items-center justify-center sticky -top-36 px-4">
       <motion.div
         id="dev"
         style={{
           backgroundColor: color,
           scale,
-          top: `calc(-5vh + ${i * 4}rem)`,
+          top: `calc(0vh + ${i * 4}rem)`,
           color: textColor,
           boxShadow: `${color} 0px 30px 400px`,
         }}
-        className={`${styles.card} !min-w-[1400px] !max-w-[1700px]  !h-fit project-card`}
+        className="flex flex-col lg:flex-row relative h-auto lg:h-[400px] rounded-lg p-6 xl:p-10 xl:max-w-[1600px] lg:max-w-[1100px] w-full shadow-lg overflow-hidden"
       >
-        <h2 className='!font-black tracking-wide font-display'>{title}</h2>
-        <div className={`${styles.body} lg:flex-row flex-col-reverse w-full`}>
-                <div className="flex flex-col gap-12">
-                <ul className="flex lg:!flex-row flex-col lg:gap-8 gap-2 list-disc pl-4" >
-              {keyUsp.map((usp, index) => (
-                <li key={index} className='min-w-max text-xl'>{usp}</li>
-              ))}
-            </ul>
-          <div className={`${styles.description} `}>
-            <p>{description}</p>
-            <span>
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                See more
-              </a>
-              <svg
-                width="22"
-                height="12"
-                viewBox="0 0 22 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z"
-                  fill={textColor}
-                />
-              </svg>
-            </span>
-          </div>
-                </div>
+        {/* Left Section: Text Content */}
+        <div className="flex flex-col flex-1 gap-3 lg:gap-4">
+          <h2 className="font-black tracking-wide text-left text-2xl lg:text-3xl">{title}</h2>
+          <ul className="list-disc pl-5 space-y-1 text-lg lg:text-xl !grid-cols-2">
+            {keyUsp.map((usp, index) => (
+              <li key={index} className="w-max col-span-1">{usp}</li>
+            ))}
+          </ul>
+            <p className=" lg:text-lg">{description}</p>
+        </div>
 
-          <div className={`${styles.imageContainer} lg:!w-50%`}>
-            <motion.div
-              className={`${styles.inner} !relative`}
-              style={{ scale: imageScale }}
-            >
-              <Image
-                height={300}
-                width={350}
-                src={`/images/usp/${src}`}
-                alt="image"
-                className='!h-[300px] !w-[350px] rounded-xl object-cover '
-              />
-            </motion.div>
-          </div>
+        {/* Right Section: Image */}
+        <div className="relative flex justify-center items-center w-full lg:w-1/5 lg:ml-10 h-[250px] lg:h-[250px] xl:h-[400px]">
+          <motion.div className="relative w-full h-full" style={{ scale: imageScale }}>
+            <Image
+              height={400}
+              width={450}
+              src={`/images/usp/${src}`}
+              alt="image"
+              className="rounded-lg object-cover w-full h-full"
+            />
+          </motion.div>
         </div>
       </motion.div>
     </div>

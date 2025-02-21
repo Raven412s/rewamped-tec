@@ -47,7 +47,7 @@ const router = useRouter()
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0 z-50 h-16 px-4  border duration-700 sm:inset-x-6  top-0  bg-background/30 backdrop-blur-md  border-gold/60 shadow-lg shadow-black/10 rounded-md transition-all">
+      className="fixed inset-x-0 z-50 h-16 px-4  border duration-700 sm:inset-x-6  top-1  bg-background/30 backdrop-blur-md  border-gold/60 shadow-lg shadow-black/10 rounded-md transition-all">
          {/* Mobile Navigation */}
       <header className="flex w-full items-center h-full">
         <nav className="flex w-full items-center ">
