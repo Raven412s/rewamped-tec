@@ -1,4 +1,5 @@
 
+import { Metadata } from "next";
 import Categories from "./_components/Categories";
 import HeroProducts from "./_components/HeroProducts";
 import OurProducts from "./_components/OurProducts";
@@ -6,7 +7,9 @@ import PreferredStructure from "./_components/PreferredStructure";
 import ProductsCardArray from "./_components/ProductsCardArray";
 
 
-
+export const metadata: Metadata = {
+    title: "Products"
+}
 
 const ProductsPage = () => {
 

@@ -1,5 +1,6 @@
 import React from "react";
 import AnimatedText from "@/components/Animated/AnimatedText";
+import Link from "next/link";
 
 const LineContent1 = () => {
   return (
@@ -21,21 +22,25 @@ const LineContent1 = () => {
         </svg>
       </div>
       {/* Content Section */}
-      <div className="flex flex-col items-start w-full md:w-3/5">
+      <div className="flex flex-col items-start w-full md:w-3/5 relative z-50">
         {/* Luxury Home Lifts */}
         <div className="flex flex-col sm:flex-row justify-start items-start sm:items-end mb-4 md:mb-6">
+        <Link href={"/products#luxury-home-lifts"} >
           <p className="text-lg sm:text-2xl mt-2">Luxury Home Lifts</p>
+        </Link>
           <div className="hidden sm:block w-[1px] h-8 bg-gray-400 ml-5" />
           <p className="text-sm sm:text-xl align-baseline mt-2 sm:mt-0 sm:ml-6">
-            FELIX, FELIX 2.0, CLIMBER X, PNEUMATIC VACUUM.
+            <Link href="/products/Felix">FELIX</Link>, <Link href="/products/Felix-2.0">FELIX 2.0</Link>, <Link href="/products/climber-x">CLIMBER X</Link>, <Link href="/products/pneumatic-elevator">PNEUMATIC VACUUM</Link>.
           </p>
         </div>
         {/* Commercial Lifts */}
         <div className="flex flex-col sm:flex-row justify-start items-start sm:items-end">
+        <Link href="/products#commercial-lifts">
           <p className="text-lg sm:text-2xl mt-2">Commercial Lifts</p>
+        </Link>
           <div className="hidden sm:block w-[1px] h-8 bg-gray-400 ml-5 sm:ml-[33px]" />
           <p className="text-sm sm:text-xl align-baseline mt-2 sm:mt-0 sm:ml-6">
-            ELIVIO, ELIVIO 2.0, ELEVENTRA.
+            <Link href="/products/Elivio">ELIVIO</Link>, <Link href="/products/Elivio-2.0">ELIVIO 2.0</Link>, <Link href="/products/Eleventra">ELEVENTRA</Link>.
           </p>
         </div>
       </div>

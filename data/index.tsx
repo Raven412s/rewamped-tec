@@ -258,6 +258,8 @@ export const images: string[] = [
 
   export const productsData: ProductDetailsProps[] = [
     {
+        ogImage: "",
+        ogImageAltText: "",
         heroHeading: "Felix Home Elevators – Elevate Your Lifestyle with Luxury & Comfort",
         heroImage: "",
         productTitle: "Felix",
@@ -319,6 +321,8 @@ export const images: string[] = [
             ]
       },
       {
+        ogImage: "",
+        ogImageAltText: "",
         heroHeading: "Felix 2.0 – Redefining Home Elevators with Innovation & Style",
         heroImage: "",
         productTitle: "Felix-2.0",
@@ -382,6 +386,8 @@ export const images: string[] = [
         ]
       },
       {
+        ogImage: "",
+        ogImageAltText: "",
         heroHeading: "Climber-X Stair Lift – Effortless Mobility, Ultimate Independence",
         heroImage: "",
         productTitle: "Climber-X",
@@ -445,6 +451,8 @@ export const images: string[] = [
         ]
       },
       {
+        ogImage: "",
+        ogImageAltText: "",
         heroHeading: "Vacuum 100 Pneumatic Lift – The Future of Elevators, Powered by Air",
         heroImage: "",
         productTitle: "Pneumatic-Elevator",
@@ -510,6 +518,8 @@ export const images: string[] = [
         ]
       },
       {
+        ogImage: "",
+        ogImageAltText: "",
         heroHeading: "Elivio with Machine Room – High-Performance Lifting for Commercial Spaces",
         heroImage: "",
         productTitle: "Elivio",
@@ -573,6 +583,8 @@ export const images: string[] = [
         ],
       },
       {
+        ogImage: "",
+        ogImageAltText: "",
         heroHeading: "Elivio 2.0 Without Machine Room – Space-Saving Excellence, Uncompromised Power",
         heroImage: "",
         productTitle: "Elivio-2.0",
@@ -636,6 +648,8 @@ export const images: string[] = [
         ],
       },
       {
+        ogImage: "",
+        ogImageAltText: "",
         heroHeading: "Eleventra Elevator – Heavy-Duty Lifting for Goods, Cars & More",
         heroImage: "",
         productTitle: "Eleventra",

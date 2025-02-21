@@ -13,6 +13,11 @@ import Innovative from "./_components/uspComponents/Innovative";
 import { umbrellaPoints } from "@/data";
 import { TestimonialBento } from "./_components/TestimonialBento";
 import OurProducts from "../products/_components/OurProducts";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Home"
+}
 
 export default function Home() {
   return (

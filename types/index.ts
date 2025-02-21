@@ -103,7 +103,9 @@ export interface MouseEvent {
     carouselImages: string[];
     productFeatures: string[];
     productSpecialFeature: string;
-    sections: {image: string, subHeading: string, description: string}[]
+    sections: {image: string, subHeading: string, description: string}[],
+    ogImage: string,
+    ogImageAltText: string
 }
 
 export interface usp {

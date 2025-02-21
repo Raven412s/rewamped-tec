@@ -36,9 +36,10 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
           ) : (
             <Skeleton />
           )}
-          <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-4xl font-bold text-center">
-            {heroHeading}
-          </h1>
+<h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
+  {heroHeading}
+</h1>
+
         </div>
 
         <Bounded className="space-y-16">
@@ -85,11 +86,12 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
             </div>
           </div>
         </Bounded>
+
+        <Bounded className="!pb-0 !mb-0">
         <h2 className="text-4xl font-bold text-center py-4 text-gold brightness-150">
           Next-Gen Elevators for Ultimate Performance
         </h2>
-
-        <Bounded className="space-y-16">
+        </Bounded>
           {sections.map((section, index) => (
             <div
               key={index}
@@ -97,7 +99,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
                 index % 2 === 0
                   ? "md:flex-row bg-gray-200/70 text-background border-muted-foreground "
                   : "md:flex-row-reverse border-gold/50"
-              } items-center gap-8 lg:max-h-[50vh] xl:max-h-[50vh] overflow-hidden px-10 py-10 relative my-10 rounded-xl border-2`}
+              } items-center gap-8 lg:max-h-[50vh] xl:max-h-[50vh] overflow-hidden px-10 py-10 relative my-10 rounded-xl border-2 mx-4`}
             >
               <div className="w-full md:w-1/2 md:block hidden">
                 {section.image ? (
@@ -132,7 +134,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
               <BigDotsBg/>
             </div>
           ))}
-        </Bounded>
     </SmallGridBg>
       </>
     );

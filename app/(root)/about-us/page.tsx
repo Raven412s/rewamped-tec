@@ -1,39 +1,16 @@
-"use client";
 import React from "react";
-import Slider from "react-slick";
 import { FaCheckCircle } from "react-icons/fa";
-import { motion } from "framer-motion";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import QuotationDrawer from "@/components/Custom/QuotationDrawer";
 import Bounded from "@/components/HOC/Bounded";
+import { Metadata } from "next";
+import GalleryCarousel from "./_components/GalleryCarousel";
+
+export const metadata: Metadata = {
+    title: "About"
+}
 
 const AboutPage = () => {
-    const carouselSettings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: true,
-        responsive: [
-          {
-            breakpoint: 1024, // For tablets and smaller
-            settings: {
-              slidesToShow: 2,
-            },
-          },
-          {
-            breakpoint: 640, // For mobile devices
-            settings: {
-              slidesToShow: 1,
-            },
-          },
-        ],
-      };
 
 
   const whyUs = [
@@ -68,11 +45,8 @@ const AboutPage = () => {
         Who Are We?
       </h2>
       <div className="flex flex-col md:flex-row items-center border-4  rounded-2xl shadow-behind shadow-2xl  border-neutral-800 bg-neutral-900">
-        <motion.div
+        <div
           className="md:w-3/5 bg-neutral-900 py-[29.5px] rounded-l-xl mx-auto px-7"
-          initial={{ x: "-100%" }}
-          whileInView={{ x: 0 }}
-          transition={{ duration: 1 }}
         >
           <p className="text-lg">
           The Elevator Company has established itself as a leading name in the luxury elevator market. With over 23 years of industry experience, our team combines seasoned expertise with the fresh perspective of a dynamic, young workforce. We are dedicated to elegance and innovation, leading to our prestigious partnership with a renowned Italian brand. This Indo-Italian collaboration blends Italian design and engineering excellence, delivering state-of-the-art elevator technology alongside bespoke, sophisticated designs.
@@ -83,19 +57,17 @@ const AboutPage = () => {
           <br />
           Looking ahead, we are focused on integrating sustainable practices into our operations, aiming to reduce our carbon footprint and contribute to environmental conservation. We are also exploring advancements in smart elevator technology to enhance user experience and operational efficiency. Our vision is to continue leading the industry by combining tradition with innovation, ensuring that our elevators not only meet but set new standards in luxury and functionality.
           </p>
-        </motion.div>
-        <motion.div
+        </div>
+        <div
           className="md:w-2/5"
-          initial={{ x: "100%" }}
-          whileInView={{ x: 0 }}
-          transition={{ duration: 1 }}
+
         >
           <img
             src="/images/parrallax/9.jpg"
             alt="Elevator Product"
             className="rounded-r-xl shadow-lg"
           />
-        </motion.div>
+        </div>
       </div>
     </Bounded>
 
@@ -139,51 +111,27 @@ const AboutPage = () => {
         Why The Elevator Company?
       </h2>
       <div className="px-8 w-full flex flex-col md:flex-row items-center justify-center mx-auto gap-8">
-        <motion.div className="w-1/3 flex justify-end"
-                  initial={{ x: "-100%" }}
-                  whileInView={{ x: 0 }}
-                  transition={{ duration: 1 }}
+        <div className="w-1/3 flex justify-end"
+
         >
           <img
             src="/images/parrallax/6.jpg"
             alt="Why Us"
             className="w-full rounded-xl shadow-lg"
           />
-        </motion.div>
-        <motion.div className="md:w-1/2 space-y-4 flex flex-col items-center"
-                      initial={{ x: "100%" }}
-                      whileInView={{ x: 0 }}
-                      transition={{ duration: 1 }}
-        >
+        </div>
+        <div className="md:w-1/2 space-y-4 flex flex-col items-center">
           {whyUs.map((item, index) => (
             <div key={index} className="flex items-center gap-3 w-4/5 bg-golden-400 p-4 rounded-r-lg">
               <FaCheckCircle />
               <span className="text-lg">{item}</span>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </Bounded>
 
-      {/* Gallery */}
-      <div className="px-8">
-        <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl capitalize py-2 text-center bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150 pb-10">
-          Gallery
-        </h2>
-        <Slider {...carouselSettings}>
-          {["images/parrallax/2.jpg", "images/parrallax/3.jpg", "images/parrallax/4.jpg", "images/parrallax/5.jpg", "images/parrallax/6.jpg", "images/parrallax/13.jpg"].map((slide, index) => (
-            <div key={index} className="px-8">
-              <div className="aspect-[9/10] relative">
-                <img
-                  src={`/${slide}`}
-                  alt={`Slide ${index + 1}`}
-                  className="rounded-lg shadow-md w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
+          <GalleryCarousel/>
       <BackgroundBeams className="bg-zinc-900" />
     </div>
 

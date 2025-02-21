@@ -90,7 +90,7 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div className="w-4/5 flex flex-col justify-start gap-6 ">
-            <div className="grid grid-cols-1 sm:grid-cols-3  md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center justify-items-stretch">
+            <div className="grid grid-cols-2 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center justify-items-start">
               {/* About Us */}
               <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
                 <div className="font-bold">About Us</div>

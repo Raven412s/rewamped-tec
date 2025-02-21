@@ -7,7 +7,7 @@ import React from 'react'
 const ProductsCardArray = () => {
   return (
     <>
-    <Bounded>
+    <Bounded id='luxury-home-lifts'>
     <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl capitalize py-2 text-center bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150 mb-8">
     Luxury Home Lifts
     </h2>
@@ -31,7 +31,7 @@ const ProductsCardArray = () => {
     <br />
     <br />
     <br />
-    <Bounded>
+    <Bounded id='commercial-lifts'>
     <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl capitalize py-2 text-center bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150 mb-8">
     Commercial Lifts
     </h2>
