@@ -8,12 +8,13 @@ interface ProductPageProps {
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-    const siteDomain = process.env.NEXT_PUBLIC_SITE_DOMAIN || "https://theelevatorcomapany.vercel.app";
+    const siteDomain = process.env.NEXT_PUBLIC_SITE_DOMAIN || "theelevatorcomapany.vercel.app";
 
     const product = productsData.find(
       (p) => p.productTitle.toLowerCase() === params.productName.toLowerCase()
     );
 
+    console.log("og Image:", product?.ogImage)
     if (!product) {
       return {
         title: "Product Not Found",
