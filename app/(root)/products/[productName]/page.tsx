@@ -9,12 +9,17 @@ interface ProductPageProps {
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
     const siteDomain = process.env.NEXT_PUBLIC_SITE_DOMAIN || "theelevatorcomapany.vercel.app";
-
     const product = productsData.find(
       (p) => p.productTitle.toLowerCase() === params.productName.toLowerCase()
     );
 
-    console.log("og Image:", product?.ogImage)
+    const ogImageUrl = product?.ogImage
+  ? product.ogImage.startsWith("http")
+    ? product.ogImage
+    : `${siteDomain}${product.ogImage.startsWith("/") ? product.ogImage : `/${product.ogImage}`}`
+  : `${siteDomain}/opengraph-image.png`;
+
+  console.log("Final Resolved OG Image URL:", ogImageUrl);
     if (!product) {
       return {
         title: "Product Not Found - The Elevator Company",
@@ -44,15 +49,13 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
         title: `${product.productTitle} | ${product?.type} - The Elevator Company`,
         description: product.productDescription,
         images: [
-          {
-            url: product.ogImage?.startsWith("http")
-              ? product.ogImage
-              : `${siteDomain}${product.ogImage || "/opengraph-image.png"}`,
-            width: 1200,
-            height: 630,
-            alt: product.heroHeading,
-          },
-        ],
+            {
+              url: ogImageUrl,
+              width: 1200,
+              height: 630,
+              alt: product.heroHeading || product.productTitle,
+            },
+          ],
       },
     };
   }
