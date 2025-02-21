@@ -258,6 +258,7 @@ export const images: string[] = [
 
   export const productsData: ProductDetailsProps[] = [
     {
+        type: "Hydraulic",
         ogImage: "/images/open-graph/opengraph-felix-page.png",
         ogImageAltText: "Felix Home Elevators – Elevate Your Lifestyle with Luxury & Comfort",
         heroHeading: "Felix Home Elevators – Elevate Your Lifestyle with Luxury & Comfort",
@@ -321,6 +322,7 @@ export const images: string[] = [
             ]
       },
       {
+        type: "Belt-Drive",
         ogImage: "/images/open-graph/opengraph-felix-2-page.png",
         ogImageAltText: "Felix 2.0 – Redefining Home Elevators with Innovation & Style",
         heroHeading: "Felix 2.0 – Redefining Home Elevators with Innovation & Style",
@@ -386,6 +388,7 @@ export const images: string[] = [
         ]
       },
       {
+        type: "Stair Lift",
         ogImage: "/images/open-graph/opengraph-climber-x-page.png",
         ogImageAltText: "",
         heroHeading: "Climber-X Stair Lift – Effortless Mobility, Ultimate Independence",
@@ -451,6 +454,7 @@ export const images: string[] = [
         ]
       },
       {
+        type: "Pneumatic",
         ogImage: "/images/open-graph/opengraph-vacuum-100-page.png",
         ogImageAltText: "",
         heroHeading: "Vacuum 100 Pneumatic Lift – The Future of Elevators, Powered by Air",
@@ -518,6 +522,7 @@ export const images: string[] = [
         ]
       },
       {
+        type: "Machine Room",
         ogImage: "/images/open-graph/opengraph-elivio-page.png",
         ogImageAltText: "",
         heroHeading: "Elivio with Machine Room – High-Performance Lifting for Commercial Spaces",
@@ -583,6 +588,7 @@ export const images: string[] = [
         ],
       },
       {
+        type: "Machine Room Less",
         ogImage: "/images/open-graph/opengraph-elivio-2-page.png",
         ogImageAltText: "",
         heroHeading: "Elivio 2.0 Without Machine Room – Space-Saving Excellence, Uncompromised Power",
@@ -648,6 +654,7 @@ export const images: string[] = [
         ],
       },
       {
+        type: "Goods Lift",
         ogImage: "/images/open-graph/opengraph-eleventra-page.png",
         ogImageAltText: "",
         heroHeading: "Eleventra Elevator – Heavy-Duty Lifting for Goods, Cars & More",
