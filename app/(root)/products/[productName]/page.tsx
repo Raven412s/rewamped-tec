@@ -35,7 +35,6 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
         },
       };
     }
-
     return {
       title: `${product.productTitle} - The Elevator Company`,
       description: product.productDescription,
