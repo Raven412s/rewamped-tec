@@ -45,9 +45,9 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
         description: product.productDescription,
         images: [
           {
-            url: product.heroImage?.startsWith("http")
-              ? product.heroImage
-              : `${siteDomain}${product.heroImage || "/opengraph-image.png"}`,
+            url: product.ogImage?.startsWith("http")
+              ? product.ogImage
+              : `${siteDomain}${product.ogImage || "/opengraph-image.png"}`,
             width: 1200,
             height: 630,
             alt: product.heroHeading,
