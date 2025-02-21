@@ -86,7 +86,7 @@ export interface MouseEvent {
     productFeatures: string[];
     productSpecialFeature: string;
     sections: {image: string, subHeading: string, description: string}[],
-    ogImage?: string,
+    ogImage: string,
     ogImageAltText?: string
     type?: string
 }

@@ -13,13 +13,6 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
       (p) => p.productTitle.toLowerCase() === params.productName.toLowerCase()
     );
 
-    const ogImageUrl = product?.ogImage
-  ? product.ogImage.startsWith("http")
-    ? product.ogImage
-    : `${siteDomain}${product.ogImage.startsWith("/") ? product.ogImage : `/${product.ogImage}`}`
-  : `${siteDomain}/opengraph-image.png`;
-
-  console.log("Final Resolved OG Image URL:", ogImageUrl);
     if (!product) {
       return {
         title: "Product Not Found - The Elevator Company",
@@ -50,7 +43,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
         description: product.productDescription,
         images: [
             {
-              url: ogImageUrl,
+              url: product.ogImage,
               width: 1200,
               height: 630,
               alt: product.heroHeading || product.productTitle,
