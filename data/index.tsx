@@ -94,7 +94,7 @@ export const umbrellaPoints = [
     },
     {
         id: 2,
-        image: '/images/parrallax/12.webp',
+        image: '/images/parrallax/9.webp',
         title: 'Design That Inspires',
         subtitle: 'Elevators that blend innovation with stunning architectural aesthetics.',
     },
