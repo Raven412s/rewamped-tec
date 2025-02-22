@@ -4,11 +4,9 @@ import Link from "next/link";
 
 const LineContent1 = () => {
   return (
-    <div className="flex flex-col md:flex-row w-full gap-6 md:gap-3 justify-between md:items-center px-6 md:px-10 py-8 md:py-16">
+    <div className="flex flex-col md:flex-row w-full gap-6 md:gap-3 md:items-center px-6 md:px-10 py-8 md:py-16 justify-center">
       {/* Heading Section */}
-      <h3 className="text-3xl md:text-5xl lg:text-7xl mx-4 md:mx-8 font-semibold max-w-full md:max-w-[350px] text-center md:text-left">
-        <AnimatedText className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase" phrase={"WHAT WE CREATE"} />
-      </h3>
+        <AnimatedText className="font-display font-black text-5xl sm:text-5xl ml-0 pl-0 md:text-5xl lg:text-6xl xl:text-7xl uppercase" phrase={"WHAT WE CREATE"} />
       {/* Arrow Icon */}
       <div className="hidden md:flex justify-center items-center">
         <svg

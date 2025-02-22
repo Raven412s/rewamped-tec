@@ -56,10 +56,12 @@ const VerticalSection = ({ title, description, src, keyUSPs, color, }: SectionPr
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase">
           {title}
         </h1>
+        <div className="overflow-hidden relative w-max">
         <FlipWords
           words={keyUSPs}
           className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-black uppercase mt-4"
         />
+        </div>
         <p className="max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl mt-4">
           {description}
         </p>

@@ -54,7 +54,7 @@ const gridItems = [
     title: "Why Choose Us?",
     description: "The best choice for safety, efficiency, and intelligence.",
     header: (
-        <div className="size-full relative">
+        <div className="size-full relative overflow-hidden">
             <FlipWords
                  words={[
                    "Safest Elevators in India",
