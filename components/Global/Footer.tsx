@@ -1,4 +1,5 @@
 "use client";
+import { MdOutlinePolicy } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -14,6 +15,8 @@ import {
     CardTitle,
 } from "../ui/card";
 import FAQModal from "./FAQModal";
+import { Separator } from "../ui/separator";
+import { ReceiptText } from "lucide-react";
 
 export default function Footer() {
     const [copied, setCopied] = useState(false);
@@ -27,8 +30,8 @@ export default function Footer() {
     };
 
     return (
-        <section className="h-full relative shadow-lg w-full min-h-[400px] bg-neutral-900/10 backdrop-blur-sm border border-neutral-800 p-6 rounded-lg flex flex-col items-center text-center lg:text-left mt-4 lg:flex-row lg:items-stretch lg:justify-between">
-            <div className="flex flex-col size-full p-3 gap-6 ">
+        <section className="h-full relative shadow-lg w-full min-h-[400px] bg-neutral-900/10 backdrop-blur-sm border border-neutral-800 p-6 pb-0 rounded-lg flex flex-col items-center text-center lg:text-left mt-4 lg:items-stretch lg:justify-between overflow-hidden">
+            <div className="flex flex-col size-full p-3 space-y-6 ">
                 {/* Top Section */}
                 <div className="flex flex-col lg:flex-row w-full border-2 border-gold z-20 overflow-hidden rounded-2xl p-4 relative">
             {/* Left - Description */}
@@ -72,7 +75,7 @@ export default function Footer() {
                     className="rounded-md object-cover"
                 />
             </div>
-        </div>
+                 </div>
 
                 {/* Bottom Section */}
                 <div className="relative w-full">
@@ -153,6 +156,21 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="flex gap-4 items-center justify-between border-t py-2 px-4">
+                <div className="text-xs text-muted-foreground flex gap-4 items-center justify-center ">
+                    <p>The Elevator Company</p>
+                    <Separator orientation="vertical" className="h-8"/>
+                    <p>&copy;  2025 All Rights Reserved</p>
+                </div>
+                <div className="text-xs text-muted-foreground flex gap-4 items-center justify-center ">
+                    <p>theelevatorcompany.com</p>
+                </div>
+                <div className="flex gap-4 items-center justify-center">
+                <Link href={"/privacy-policy"} className="text-xs text-muted-foreground"> <span className="flex gap-2 items-center"> <MdOutlinePolicy/> Privacy Policy </span> </Link>
+                <Separator orientation="vertical" className="h-8"/>
+                <Link href={"/terms-and-conditions"} className="text-xs text-muted-foreground"> <span className="flex gap-2 items-center"> <ReceiptText className="h-3 w-3" /> Terms & Conditions </span> </Link>
                 </div>
             </div>
         </section>
