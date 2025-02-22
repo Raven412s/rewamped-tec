@@ -13,7 +13,7 @@ const LuxuryHomeLifts = () => {
           <div className="flex flex-col md:flex-row gap-4 p-5">
             <div className="relative w-full md:w-1/2 aspect-[5/3] overflow-hidden rounded-lg">
               <Image
-                src="/images/luxury/felix.jpg"
+                src="/images/luxury/felix.webp"
                 alt="Felix"
                 layout="fill"
                 objectFit="cover"

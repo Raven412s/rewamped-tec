@@ -13,7 +13,7 @@ const CommercialLifts = () => {
           <div className="flex flex-col md:flex-row gap-4 p-5">
             <div className="relative w-full md:w-1/2 aspect-[5/3] overflow-hidden rounded-lg">
               <Image
-                src="/images/commercial/elivio.jpg"
+                src="/images/commercial/elivio.webp"
                 alt="Elivio"
                 layout="fill"
                 objectFit="cover"
@@ -22,7 +22,7 @@ const CommercialLifts = () => {
             </div>
             <div className="relative w-full md:w-1/2 aspect-[5/3] overflow-hidden rounded-lg">
               <Image
-                src="/images/commercial/eleventra.jpg"
+                src="/images/commercial/eleventra.webp"
                 alt="Eleventra"
                 layout="fill"
                 objectFit="cover"

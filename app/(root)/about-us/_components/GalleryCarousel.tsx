@@ -40,12 +40,12 @@ const GalleryCarousel = () => {
         </h2>
         <Slider {...carouselSettings}>
           {[
-            "/images/parrallax/2.jpg",
-            "/images/parrallax/3.jpg",
-            "/images/parrallax/4.jpg",
-            "/images/parrallax/5.jpg",
-            "/images/parrallax/6.jpg",
-            "/images/parrallax/13.jpg",
+            "/images/parrallax/2.webp",
+            "/images/parrallax/3.webp",
+            "/images/parrallax/4.webp",
+            "/images/parrallax/5.webp",
+            "/images/parrallax/6.webp",
+            "/images/parrallax/13.webp",
           ].map((slide, index) => (
             <div key={index} className="px-8">
               <div className="aspect-[9/10] relative">

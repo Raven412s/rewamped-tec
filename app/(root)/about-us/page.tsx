@@ -30,7 +30,7 @@ const AboutPage = () => {
     {/* Hero Section */}
     <div
       className="relative bg-zinc-900  h-[80vh] flex items-center justify-center bg-cover bg-center before:w-full before:h-full before:content-[''] before:bg-[rgba(125,125,125,0.3)] before:absolute before:z-10"
-      style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+      style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
     >
       <div className="text-center z-20">
         <h1 className="text-4xl font-bold">About The Elevator Company</h1>
@@ -59,7 +59,7 @@ const AboutPage = () => {
         </div>
         <div className="w-full md:w-2/5 relative h-[400px] rounded-t-xl md:rounded-r-xl shadow-lg overflow-hidden ">
             <Image
-              src="/images/parrallax/9.jpg"
+              src="/images/parrallax/9.webp"
               alt="Elevator Product"
               fill
               className="object-cover"
@@ -111,7 +111,7 @@ const AboutPage = () => {
       <div className="px-8 w-full flex flex-col md:flex-row items-center justify-center mx-auto gap-8">
       <div className="w-1/3 relative h-[350px]">
             <Image
-              src="/images/parrallax/6.jpg"
+              src="/images/parrallax/6.webp"
               alt="Why Us"
               fill
               className="rounded-xl shadow-lg object-cover"

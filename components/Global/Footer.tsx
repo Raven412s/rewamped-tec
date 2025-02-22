@@ -63,7 +63,7 @@ export default function Footer() {
             {/* Right - Banner Image (Visible only on large screens) */}
             <div className="hidden lg:flex lg:w-3/5 relative items-center justify-center">
                 <Image
-                    src="/images/hero-bg.jpg"
+                    src="/images/hero-bg.webp"
                     alt="Modern Elevator in a High-Rise Building"
                     width={900}
                     height={600}

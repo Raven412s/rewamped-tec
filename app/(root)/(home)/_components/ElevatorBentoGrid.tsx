@@ -48,7 +48,7 @@ const gridItems = [
   {
     title: "Smart Elevators",
     description: "AI-driven optimization for a smoother experience.",
-    header: <ImageHeader src="/images/product/felix.jpg" />,
+    header: <ImageHeader src="/images/product/felix.webp" />,
     icon: <IconBrain className="h-6 w-6 text-gold" />,
     className: "md:row-span-2 bg-background", // Vertical image
   },
