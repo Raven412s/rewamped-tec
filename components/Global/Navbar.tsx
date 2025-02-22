@@ -52,21 +52,21 @@ const router = useRouter()
         <nav className="flex w-full items-center ">
           {/* Logo and Main Button */}
           <div className="flex items-center gap-7 w-full justify-between">
-            <div className="flex items-center gap-8">
-            <a href="/">
+            <div className="flex items-center gap-8 ">
+            <Link href="/">
               <img
                 src="/images/the-elevator-company.png"
                 alt="logo"
                 className="w-16"
               />
-            </a>
-            <Rounded>
-              <p onClick={handleProductsClick} className="flex gap-3 !max-w-max items-center justify-start">
+            </Link>
+                      {/* Desktop Navigation Links */}
+          <div className="hidden lg:flex gap-6 items-center ">
+            <Rounded >
+              <p onClick={handleProductsClick} className="lg:flex gap-3 !max-w-max items-center justify-start hidden ">
                 Products <TiLocationArrow />
               </p>
             </Rounded>
-                      {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex gap-6 items-center ">
             {navItems.map((item) => (
                 item === "Home" ? (<Link
                     href={`/`}
@@ -86,6 +86,7 @@ const router = useRouter()
             <QuotationDrawer/>
           </div>
             </div>
+            <h1 className="md:text-4xl sm:text-3xl text-md uppercase md:capitalize lg:hidden font-display tracking-wider leading-tight text-gold brightness-150 text-center " > <strong> The Elevator Company </strong> </h1>
             <Sheet >
               <SheetTrigger asChild>
                 <button className="p-2 block lg:hidden right-10 ">

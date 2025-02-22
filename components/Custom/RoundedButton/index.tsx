@@ -4,6 +4,7 @@ import gsap from "gsap";
 import Magnetic from "../Magnetic";
 import styles from "./style.module.scss";
 import { AnimatedButtonProps } from "@/types";
+import { cn } from "@/lib/utils";
 
 
 const Index: React.FC<AnimatedButtonProps> = ({
@@ -14,7 +15,7 @@ const Index: React.FC<AnimatedButtonProps> = ({
   const circleRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
   const timeoutIdRef = useRef<NodeJS.Timeout | null>(null);
-
+    const {className} = {...attributes}
   useEffect(() => {
     // Initialize GSAP timeline
     timelineRef.current = gsap.timeline({ paused: true });
@@ -43,7 +44,7 @@ const Index: React.FC<AnimatedButtonProps> = ({
   return (
     <Magnetic>
       <div
-        className={`${styles.roundedButton}`}
+        className={cn(styles.roundedButton, className)  }
         style={{ overflow: "hidden" }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
