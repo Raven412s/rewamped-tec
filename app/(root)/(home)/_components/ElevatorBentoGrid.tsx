@@ -18,6 +18,7 @@ const ImageHeader = ({ src }: { src: string }) => (
     src={src}
     alt="Elevator"
     fill
+    loading="lazy"
     className="object-cover scale-110 hover:scale-100 transition-transform duration-500"
   />
 </div>

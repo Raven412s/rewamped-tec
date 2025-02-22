@@ -67,7 +67,7 @@ const Column: React.FC<ColumnProps> = ({ images, y }) => (
   <motion.div className={styles.column} style={{ y }}>
     {images.map((src, index) => (
       <div key={index} className={styles.imageContainer}>
-        <Image  src={`/images/parrallax/${src}`} alt={`Parallax ${index}`} fill />
+        <Image  src={`/images/parrallax/${src}`} alt={`Parallax ${index}`} fill  loading='lazy'/>
       </div>
     ))}
   </motion.div>

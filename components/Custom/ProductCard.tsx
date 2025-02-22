@@ -36,6 +36,7 @@ export function ProductCard({ title, description, moreInfo, imageUrl, type }: Pr
           alt={title}
           layout="fill"
           objectFit="cover"
+          loading="lazy"
         />
       </div>
         </CardHeader>
