@@ -67,7 +67,7 @@ export default function Footer() {
                     alt="Modern Elevator in a High-Rise Building"
                     width={900}
                     height={600}
-                    priority={true}
+                    priority
                     quality={80}
                     className="rounded-md object-cover"
                 />

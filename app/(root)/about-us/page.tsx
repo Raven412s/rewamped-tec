@@ -26,19 +26,41 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-20  text-white overflow-hidden">
-    {/* Hero Section */}
-    <div
-      className="relative bg-zinc-900  h-[80vh] flex items-center justify-center bg-cover bg-center before:w-full before:h-full before:content-[''] before:bg-[rgba(125,125,125,0.3)] before:absolute before:z-10"
-      style={{ backgroundImage: "url('/images/hero-bg.webp')" }}
-    >
-      <div className="text-center z-20">
-        <h1 className="text-4xl font-bold">About The Elevator Company</h1>
-        <p className="mt-4 text-lg">Rising Above, Safely and Swiftly</p>
-        <br />
-        <QuotationDrawer triggerText="Contact" />
+<div className="flex flex-col gap-20 text-white overflow-hidden">
+  {/* Hero Section */}
+  <div className="relative h-[80vh] flex items-center justify-center">
+    {/* Background Image */}
+    <Image
+      src="/images/hero-bg.webp"
+      alt="Hero Background"
+      layout="fill"
+      objectFit="cover"
+      quality={90}
+      priority
+      className="z-0"
+    />
+
+    {/* Overlay for readability */}
+    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-10"></div>
+
+    {/* Content */}
+    <div className="relative text-center z-20 px-6">
+      <h1 className="text-5xl font-extrabold tracking-wide animate-fadeIn">
+        About The Elevator Company
+      </h1>
+      <p className="mt-4 text-lg text-gray-300 animate-fadeInSlow">
+        Rising Above, Safely and Swiftly
+      </p>
+
+      {/* Call-to-action button */}
+      <div className="mt-6">
+        <QuotationDrawer
+          triggerText="Contact"
+        />
       </div>
     </div>
+  </div>
+
 
     {/* Who Are We */}
     <Bounded id="our-story">
@@ -63,6 +85,7 @@ const AboutPage = () => {
               alt="Elevator Product"
               fill
               className="object-cover"
+              priority
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
@@ -113,6 +136,7 @@ const AboutPage = () => {
             <Image
               src="/images/parrallax/6.webp"
               alt="Why Us"
+              priority
               fill
               className="rounded-xl shadow-lg object-cover"
               sizes="(max-width: 768px) 100vw, 40vw"
