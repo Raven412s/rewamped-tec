@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { TemplateProps } from '@/types';
+import Image from 'next/image';
 
 export default function Template({ children }: TemplateProps) {
   const logoRef = useRef<HTMLDivElement>(null);
@@ -48,12 +49,13 @@ export default function Template({ children }: TemplateProps) {
         ref={logoRef}
         className="fixed inset-0 flex items-center justify-center z-[9999] bg-background"
       >
-        <div className="w-48 aspect-square">
-          <img
+        <div className="w-48 aspect-square relative">
+        <Image
             src="/images/the-elevator-company.png"
             alt="Logo"
-            className="w-full h-full object-contain"
-          />
+            fill
+            className="object-contain"
+        />
         </div>
       </div>
 

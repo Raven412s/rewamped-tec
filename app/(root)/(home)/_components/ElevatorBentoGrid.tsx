@@ -9,16 +9,18 @@ import {
     IconBuildingSkyscraper,
     IconShieldCheck,
 } from "@tabler/icons-react";
+import Image from "next/image";
 
 
 const ImageHeader = ({ src }: { src: string }) => (
-    <div className="w-full h-full min-h-[12rem] rounded-xl overflow-hidden">
-      <img
-        src={src}
-        alt="Elevator"
-        className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-500"
-      />
-    </div>
+<div className="relative w-full h-full min-h-[12rem] rounded-xl overflow-hidden">
+  <Image
+    src={src}
+    alt="Elevator"
+    fill
+    className="object-cover scale-110 hover:scale-100 transition-transform duration-500"
+  />
+</div>
   );
 
   const Skeleton = () => (
@@ -82,6 +84,5 @@ const gridItems = [
     description: "Eco-friendly elevators reducing power consumption.",
     header: <Skeleton />,
     icon: <IconBolt className="h-6 w-6 text-gold" />,
-
   },
 ];

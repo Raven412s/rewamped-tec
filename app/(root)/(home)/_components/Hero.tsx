@@ -2,6 +2,7 @@
 
 import QuotationDrawer from '@/components/Custom/QuotationDrawer';
 import { slides } from '@/data';
+import Image from 'next/image';
 import { useEffect, useState, useRef } from 'react';
 
 export default function Hero() {
@@ -29,15 +30,17 @@ export default function Hero() {
           }`}
         >
           <div className="relative w-full h-full overflow-hidden rounded-xl">
-            <img
-              className={`w-full h-full object-cover rounded-xl transition-all  ease-linear ${
-                index === currentSlide ? 'animate-pan' : ''
-              }`}
-              src={slide.image}
-              alt={slide.title}
-              loading="lazy"
-            />
-          </div>
+  <Image
+    src={slide.image}
+    alt={slide.title}
+    fill
+    className={`object-cover rounded-xl transition-all ease-linear ${
+      index === currentSlide ? "animate-pan" : ""
+    }`}
+    priority
+  />
+</div>
+
         </div>
       ))}
 

@@ -4,16 +4,14 @@ import { GridBg } from "@/components/Assets/GridBg";
 import CardParallax from "@/components/Custom/CardParalax/CardParalax";
 import SmoothScroll from "@/components/Custom/SmoothParrallax/page";
 import Bounded from "@/components/HOC/Bounded";
-import CardHorizontal from "./_components/CardHorizontal";
+import { umbrellaPoints } from "@/data";
+import { Metadata } from "next";
+import OurProducts from "../products/_components/OurProducts";
 import { ElevatorBentoGrid } from "./_components/ElevatorBentoGrid";
 import Hero from "./_components/Hero";
 import { ReelsBento } from "./_components/ReelsBento";
 import ServicesGrid from "./_components/ServicesGrid";
-import Innovative from "./_components/uspComponents/Innovative";
-import { umbrellaPoints } from "@/data";
 import { TestimonialBento } from "./_components/TestimonialBento";
-import OurProducts from "../products/_components/OurProducts";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Home"
