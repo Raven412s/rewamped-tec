@@ -10,22 +10,22 @@ export const metadata: Metadata = {
 
 const TermsAndConditions = () => {
   return (
-   <Bounded>
+   <Bounded id="head">
      <div className="max-w-4xl mx-auto p-6 space-y-6  ">
-      <h1 className="text-3xl font-bold text-center ">Terms & Conditions</h1>
+      <h1 className="text-3xl font-bold text-center text-gold brightness-150">Terms & Conditions</h1>
       <section>
-        <h2 className="text-xl font-semibold">Payment Policy</h2>
-        <p>We strictly DO NOT accept cash payments in any form. All payments must be made in favor of <strong>The Elevator Company</strong>. Please note that all listed prices are exclusive of taxes.</p>
-        <p>Bank Details:<br />
+        <h2 className="mb-3 text-gold/90 brightness-110 text-xl font-semibold">Payment Policy</h2>
+        <p className="text-muted-foreground">We strictly DO NOT accept cash payments in any form. All payments must be made in favor of <strong>The Elevator Company</strong>. Please note that all listed prices are exclusive of taxes.</p>
+        <p className="text-muted-foreground">Bank Details:<br />
         <strong>Punjab National Bank</strong>, Vikas Puri, New Delhi<br />
         <strong>Account No:</strong> 1610002100309687</p>
-        <p>For seamless online payments, please forward your transaction details, including your name, city, and amount, to <a href="mailto:vikas@thelevatorcompany.com" className="text-gold hover:underline">vikas@thelevatorcompany.com</a>. Once the payment is realized, we will promptly acknowledge and issue a receipt.</p>
+        <p className="text-muted-foreground">For seamless online payments, please forward your transaction details, including your name, city, and amount, to <a href="mailto:vikas@thelevatorcompany.com" className="text-gold hover:underline">vikas@thelevatorcompany.com</a>. Once the payment is realized, we will promptly acknowledge and issue a receipt.</p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold">Power Requirements</h2>
-        <p>To ensure optimal performance and longevity of the lift, a stabilized power connection is essential. The required specifications are:</p>
-        <ul className="list-disc list-inside">
+        <h2 className="mb-3 text-gold/90 brightness-110 text-xl font-semibold">Power Requirements</h2>
+        <p className="text-muted-foreground">To ensure optimal performance and longevity of the lift, a stabilized power connection is essential. The required specifications are:</p>
+        <ul className="list-disc list-inside text-muted-foreground">
           <li>Stabalized Power Supply</li>
           <li>Minimum 32 Amp supply</li>
           <li>Dedicated circuit breaker</li>
@@ -33,41 +33,41 @@ const TermsAndConditions = () => {
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold">Installation Requirements</h2>
-        <p>Successful installation requires your partnership. Customers are responsible for any necessary civil works. If structural support is required, it must be arranged independently.</p>
-        <p>For flexibility, installation requests beyond standard working hours can be accommodated, subject to availability and a nominal fee.</p>
+        <h2 className="mb-3 text-gold/90 brightness-110 text-xl font-semibold">Installation Requirements</h2>
+        <p className="text-muted-foreground">Successful installation requires your partnership. Customers are responsible for any necessary civil works. If structural support is required, it must be arranged independently.</p>
+        <p className="text-muted-foreground">For flexibility, installation requests beyond standard working hours can be accommodated, subject to availability and a nominal fee.</p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold">Warranty Coverage</h2>
-        <p>We are dedicated to ensuring the longevity of your lift with our robust warranty coverage. Our warranty includes parts, provided the lift is maintained regularly by our trained experts at <strong>The Elevator Company</strong>. Compliance with the manufacturer’s Annual Maintenance Contract (AMC) and servicing guidelines is required to ensure uninterrupted warranty benefits.</p>
+        <h2 className="mb-3 text-gold/90 brightness-110 text-xl font-semibold">Warranty Coverage</h2>
+        <p className="text-muted-foreground">We are dedicated to ensuring the longevity of your lift with our robust warranty coverage. Our warranty includes parts, provided the lift is maintained regularly by our trained experts at <strong>The Elevator Company</strong>. Compliance with the manufacturer’s Annual Maintenance Contract (AMC) and servicing guidelines is required to ensure uninterrupted warranty benefits.</p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold">Force Majeure</h2>
-        <p>In rare cases of unforeseen external disruptions beyond our control, reasonable extensions to service timelines and costs may occur. If such circumstances persist beyond 60 days, we will provide full transparency and the option to terminate the work without obligations.</p>
+        <h2 className="mb-3 text-gold/90 brightness-110 text-xl font-semibold">Force Majeure</h2>
+        <p className="text-muted-foreground">In rare cases of unforeseen external disruptions beyond our control, reasonable extensions to service timelines and costs may occur. If such circumstances persist beyond 60 days, we will provide full transparency and the option to terminate the work without obligations.</p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold">Storage Policy</h2>
-        <p>We offer complimentary lift storage for an initial period of two weeks. Beyond this grace period, minimal storage charges will apply.</p>
+        <h2 className="mb-3 text-gold/90 brightness-110 text-xl font-semibold">Storage Policy</h2>
+        <p className="text-muted-foreground">We offer complimentary lift storage for an initial period of two weeks. Beyond this grace period, minimal storage charges will apply.</p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold">Order Cancellation</h2>
-        <p>We understand that plans may change. In the event of order cancellation:</p>
-        <ul className="list-disc list-inside">
+        <h2 className="mb-3 text-gold/90 brightness-110 text-xl font-semibold">Order Cancellation</h2>
+        <p className="text-muted-foreground">We understand that plans may change. In the event of order cancellation:</p>
+        <ul className="list-disc list-inside text-muted-foreground">
           <li>Within 24 hours of quotation: 25% of the total price will be retained.</li>
           <li>Once production begins: 60% of the total price will be retained.</li>
           <li>Upon readiness for dispatch: 85% of the total price will be retained.</li>
           <li>At the time of delivery: Full payment is required.</li>
         </ul>
-        <p>To process cancellations, requests must be submitted via registered email.</p>
+        <p className="text-muted-foreground">To process cancellations, requests must be submitted via registered email.</p>
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold">Legal Compliance</h2>
-        <p>All operations adhere to the esteemed legal standards of India. In the unlikely event of disputes, they will be resolved exclusively within India’s jurisdiction.</p>
+        <h2 className="mb-3 text-gold/90 brightness-110 text-xl font-semibold">Legal Compliance</h2>
+        <p className="text-muted-foreground">All operations adhere to the esteemed legal standards of India. In the unlikely event of disputes, they will be resolved exclusively within India’s jurisdiction.</p>
       </section>
     </div>
    </Bounded>

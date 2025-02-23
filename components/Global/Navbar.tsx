@@ -1,15 +1,17 @@
 "use client";
 
+import QuotationDrawer from "@/components/Custom/QuotationDrawer";
 import Rounded from "@/components/Custom/RoundedButton/index";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"; // Shadcn's Sheet
 import gsap from "gsap";
+import { Menu } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 import { useWindowScroll } from "react-use";
-import QuotationDrawer from "@/components/Custom/QuotationDrawer";
-import Image from "next/image";
+import { Button } from "../ui/button";
 
 const navItems = ["Home", "Gallery", "About Us"];
 
@@ -44,7 +46,11 @@ const Navbar = () => {
   }, [isNavVisible]);
 
   const handleNavigation = (path: string) => {
-    router.push(path);
+    if(path === "/home"){
+        router.back()
+    } else {
+        router.push(path);
+    }
     setIsSheetOpen(false); // Close sheet after routing
   };
 
@@ -75,13 +81,16 @@ const Navbar = () => {
               </p>
             </Rounded>
             {navItems.map((item) => (
-              <Link
+              <Button
+               variant={"link"}
                 key={item}
-                href={item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                onClick={() =>
+                    handleNavigation(`/${item.toLowerCase().replace(/\s+/g, "-")}`)
+                  }
                 className="nav-hover-btn min-w-max text-sm"
               >
                 {item}
-              </Link>
+              </Button>
             ))}
             <QuotationDrawer />
           </div>
@@ -95,11 +104,9 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild>
-            <button className="p-2 block lg:hidden">
-              <span className="block w-6 h-1 bg-gold rounded mb-1"></span>
-              <span className="block w-6 h-1 bg-gold rounded mb-1"></span>
-              <span className="block w-6 h-1 bg-gold rounded"></span>
-            </button>
+            <Button size={"icon"} variant={"link"} className="p-2 block lg:hidden">
+                <Menu className="text-gold "/>
+            </Button>
           </SheetTrigger>
           <SheetContent
             side="left"
@@ -117,15 +124,16 @@ const Navbar = () => {
               <p className="text-lg font-bold">The Elevator Company</p>
             </div>
             {navItems.map((item) => (
-              <button
+              <Button
+                variant={"link"}
                 key={item}
                 onClick={() =>
-                  handleNavigation(item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`)
+                  handleNavigation(`/${item.toLowerCase().replace(/\s+/g, "-")}`)
                 }
-                className="nav-hover-btn min-w-max text-sm text-left"
+                className="nav-hover-btn max-w-max text-sm text-left "
               >
                 {item}
-              </button>
+              </Button>
             ))}
             <Rounded>
               <p onClick={() => handleNavigation("/products")} className="flex gap-3 items-center">

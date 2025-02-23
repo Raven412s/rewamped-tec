@@ -28,7 +28,7 @@ export function ProductCard({ title, description, moreInfo, imageUrl, type }: Pr
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <Card className="w-[350px] rounded-xl overflow-hidden shadow-md">
+    <Card className="min-w-[300px] rounded-xl overflow-hidden shadow-md mx-5">
         <CardHeader className="p-0 m-0 rounded-xl">
         <div className="relative w-full h-[350px] rounded-xl">
         <Image
@@ -41,7 +41,7 @@ export function ProductCard({ title, description, moreInfo, imageUrl, type }: Pr
       </div>
         </CardHeader>
       <CardContent className="p-4">
-        <CardTitle className="text-lg font-semibold capitalize flex gap-2 items-center">{title} {type && (<span className="flex gap-2 items-center"><Separator orientation="vertical" className="h-7"/><span>{type}</span></span>)}</CardTitle>
+        <CardTitle className="text-lg font-semibold capitalize flex gap-2 items-center min-w-max">{title} {type && (<span className="flex gap-2 items-center"><Separator orientation="vertical" className="h-7"/><span > {type}</span></span>)}</CardTitle>
         <motion.div
           animate={{ height: expanded ? "auto" : "60px" }}
           className="overflow-hidden"

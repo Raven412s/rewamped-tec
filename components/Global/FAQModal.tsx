@@ -1,35 +1,31 @@
-import React from 'react'
-import { Modal, ModalBody, ModalContent, ModalTrigger } from '../ui/animated-modal'
-import { FaQuestionCircle } from 'react-icons/fa'
-import { CButton } from '../Animated/CButton'
-import FAQAccordion from '../Animated/FAQAccordion'
-
-type Props = {}
-
-const FAQModal = (props: Props) => {
+import {
+    Dialog,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger
+} from "@/components/ui/dialog";
+import { FaQuestionCircle } from "react-icons/fa";
+import FAQAccordion from "../Animated/FAQAccordion";
+const FAQModal = () => {
   return (
-    <Modal>
-    <ModalTrigger className="p-0 m-0 w-max">
-    <span className="flex gap-2 flex-row items-center justify-center
-            sm:justify-start"><FaQuestionCircle /> FAQ's</span>
-    </ModalTrigger>
-    <ModalBody>
-    <CButton
-          duration={Math.floor(Math.random() * 10000) + 10000}
-          borderRadius="0rem"
-          style={{
-            backgroundColor: "#131415",
-            borderRadius: "0rem",
-          }}
-          className="md:w-[38rem] md:h-[38rem] w-full flex flex-col rounded-none items-center justify-center p-6"
-        >
-    <ModalContent>
-            <FAQAccordion/>
-    </ModalContent>
-        </CButton>
-    </ModalBody>
-</Modal>
-  )
-}
+<Dialog>
+<DialogTrigger asChild>
+<span className="flex gap-2 flex-row items-center justify-center sm:justify-start text-sm sm:text-base">
+    <FaQuestionCircle /> FAQ's
+    </span>
+</DialogTrigger>
+<DialogContent className="sm:max-w-[625px]">
+  <DialogHeader>
+    <DialogTitle>Frequently Asked Questions</DialogTitle>
+  </DialogHeader>
+  <div className="flex items-center justify-center w-full max-w-lg md:max-w-2xl lg:max-w-3xl bg-white dark:bg-neutral-950 rounded-lg shadow-xl p-4 sm:p-6 lg:p-8">
+  <FAQAccordion />
+  </div>
 
-export default FAQModal
+</DialogContent>
+</Dialog>
+  );
+};
+
+export default FAQModal;

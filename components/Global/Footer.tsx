@@ -170,9 +170,9 @@ export default function Footer() {
                     <p>theelevatorcompany.com</p>
                 </div>
                 <div className="flex gap-4 items-center justify-center">
-                <Link href={"/privacy-policy"} className="text-xs text-muted-foreground"> <span className="flex gap-2 items-center"> <MdOutlinePolicy/> Privacy Policy </span> </Link>
+                <Link href={"/privacy-policy#head"} className="text-xs text-muted-foreground"> <span className="flex gap-2 items-center"> <MdOutlinePolicy/> Privacy Policy </span> </Link>
                 <Separator orientation="vertical" className="h-8"/>
-                <Link href={"/terms-and-conditions"} className="text-xs text-muted-foreground"> <span className="flex gap-2 items-center"> <ReceiptText className="h-3 w-3" /> Terms & Conditions </span> </Link>
+                <Link href={"/terms-and-conditions#head"} className="text-xs text-muted-foreground"> <span className="flex gap-2 items-center"> <ReceiptText className="h-3 w-3" /> Terms & Conditions </span> </Link>
                 </div>
             </div>
         </section>
