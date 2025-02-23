@@ -10,10 +10,12 @@ export const metadata: Metadata = {
 export default function GalleryPage ()  {
   return (
     <Bounded>
+        <div className="my-4">
         <GalleryCarousel/>
       <p className='text-xs text-muted-foreground text-center uppercase font-display text-black'>
         **This is only a place holder page for the gallery**
       </p>
+        </div>
     </Bounded>
   )
 }

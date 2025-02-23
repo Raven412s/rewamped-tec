@@ -19,6 +19,7 @@ const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(true);
   const { y: currentScrollY } = useWindowScroll();
   const router = useRouter();
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   useEffect(() => {
     if (currentScrollY === 0) {
@@ -42,8 +43,9 @@ const Navbar = () => {
     });
   }, [isNavVisible]);
 
-  const handleProductsClick = () => {
-    router.push("/products");
+  const handleNavigation = (path: string) => {
+    router.push(path);
+    setIsSheetOpen(false); // Close sheet after routing
   };
 
   return (
@@ -68,7 +70,7 @@ const Navbar = () => {
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex gap-6 items-center">
             <Rounded>
-              <p onClick={handleProductsClick} className="flex gap-3 items-center">
+              <p onClick={() => handleNavigation("/products")} className="flex gap-3 items-center">
                 Products <TiLocationArrow />
               </p>
             </Rounded>
@@ -91,7 +93,7 @@ const Navbar = () => {
         </h1>
 
         {/* Mobile Menu */}
-        <Sheet>
+        <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild>
             <button className="p-2 block lg:hidden">
               <span className="block w-6 h-1 bg-gold rounded mb-1"></span>
@@ -115,16 +117,18 @@ const Navbar = () => {
               <p className="text-lg font-bold">The Elevator Company</p>
             </div>
             {navItems.map((item) => (
-              <Link
+              <button
                 key={item}
-                href={item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`}
-                className="nav-hover-btn min-w-max text-sm"
+                onClick={() =>
+                  handleNavigation(item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`)
+                }
+                className="nav-hover-btn min-w-max text-sm text-left"
               >
                 {item}
-              </Link>
+              </button>
             ))}
             <Rounded>
-              <p onClick={handleProductsClick} className="flex gap-3 items-center">
+              <p onClick={() => handleNavigation("/products")} className="flex gap-3 items-center">
                 Products <TiLocationArrow />
               </p>
             </Rounded>

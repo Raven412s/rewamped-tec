@@ -103,7 +103,7 @@ export default function Footer() {
                                 {/* About Us */}
                                 <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
                                     <div className="font-bold">About Us</div>
-                                    <Link href="/about#our-story">
+                                    <Link href="/about-us#our-story">
                                         <span className="flex gap-2 flex-row items-center justify-center sm:justify-start">
                                             <FaBook /> Our Story
                                         </span>
@@ -118,9 +118,11 @@ export default function Footer() {
                                 {/* Socials */}
                                 <div className="flex flex-col gap-2 text-center md:text-left justify-start h-full">
                                     <div className="font-bold">Socials</div>
-                                    <span className="flex gap-2 flex-row items-center justify-center sm:justify-start">
+                                   <Link href={"https://www.facebook.com/share/1DtocsgwPX/"} target="_blank">
+                                   <span className="flex gap-2 flex-row items-center justify-center sm:justify-start">
                                         <FaFacebook /> Facebook
                                     </span>
+                                   </Link>
                                     <Link href="https://www.instagram.com/thelevatorcompany?igsh=b3B0YzQ5Y3ZiN3hi" target="_blank">
                                         <span className="flex gap-2 flex-row items-center justify-center sm:justify-start">
                                             <FaInstagram /> Instagram
