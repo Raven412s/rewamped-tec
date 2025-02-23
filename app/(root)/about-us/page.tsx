@@ -114,7 +114,7 @@ const AboutPage = () => {
     </div>
 
     {/* Timeline */}
-    <div className="text-center px-8">
+    {/* <div className="text-center px-8">
       <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl capitalize py-2 text-center bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150 pb-10">
         How It All Began: A Brief Timeline
       </h2>
@@ -124,7 +124,7 @@ const AboutPage = () => {
         <p className="text-xl"><strong>2010</strong> - Partnered with Global Brands</p>
         <p className="text-xl"><strong>2020</strong> - Introduced Smart Elevators</p>
       </div>
-    </div>
+    </div> */}
 
     {/* Why Us */}
     <Bounded>
