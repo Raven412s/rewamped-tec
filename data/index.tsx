@@ -283,7 +283,7 @@ export const images: string[] = [
           "Using energy-efficient German vacuum-sealed hydraulic technology, Felix is a luxury home elevator designed for those who seek sophistication, efficiency, and seamless performance.",
             sections: [
                 {
-                    image: "/images/parrallax/4.webp",
+                    image: "/images/product/felix.webp",
                     subHeading: "How Exactly Does a Hydraulic Elevator For Home Work",
                     description: "The key to a hydraulic elevator’s magic lies in its namesake – hydraulics. Imagine a sealed system filled with hydraulic fluid, a special oil. When an electric pump activates, it pressurizes this fluid, sending it coursing through pipes. This pressurized fluid then reaches the heart of the system – a piston housed within a cylinder. Think of the piston as a powerful muscle. As the pressurized fluid enters the cylinder, it pushes against the piston, causing it to rise. This upward movement of the piston translates to the movement of the elevator car, smoothly lifting it towards your desired floor."
                 },

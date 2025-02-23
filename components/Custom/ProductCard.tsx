@@ -37,6 +37,7 @@ export function ProductCard({ title, description, moreInfo, imageUrl, type }: Pr
           layout="fill"
           objectFit="cover"
           loading="lazy"
+          className="rounded-b-3xl"
         />
       </div>
         </CardHeader>

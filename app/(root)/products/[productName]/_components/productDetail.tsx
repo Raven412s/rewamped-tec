@@ -109,18 +109,18 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
             key={index}
             className={`flex flex-col ${
               index % 2 === 0
-                ? "md:flex-row bg-gray-200/70 text-background border-muted-foreground "
+                ? "md:flex-row  bg-gray-200/70 text-background border-muted-foreground "
                 : "md:flex-row-reverse border-gold/50"
             } items-center gap-8 lg:max-h-[50vh] xl:max-h-[50vh] overflow-hidden px-10 py-10 relative my-10 rounded-xl border-2 mx-4`}
           >
-            <div className="w-full md:w-1/2 md:block hidden">
+            <div className={`w-full md:w-1/2  items-center relative  md:flex hidden ${index % 2 === 0 ? `justify-center`: `justify-center`}`}>
               {section.image ? (
                 <Image
                   src={section.image}
                   alt={`Section ${index + 1}`}
-                  width={500}
-                  height={500}
-                  className="rounded-md w-full h-auto object-contain"
+                 width={250}
+                 height={600}
+                  className="rounded-md  h-auto object-contain"
                   loading="lazy"
                 />
               ) : (
