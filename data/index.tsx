@@ -149,8 +149,8 @@ export const images: string[] = [
     },
     {
       id: 2,
-      title: "+95% Happy Customers",
-      subtitle: "Over 95% of our customers experience enhanced convenience with our advanced elevator solutions",
+      title: "700+ Happy Customers",
+      subtitle: "More than 700 customers have benefited from the enhanced convenience provided by our cutting-edge elevator solutions",
       icon: <IconFileSmile />,
       header: <TestimonialHeader imageSrc="/images/testimonials/2.webp" videoSrc="/videos/video1.mp4" alt="Happy customer using elevator" />,
     },
