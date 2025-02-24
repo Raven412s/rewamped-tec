@@ -5,7 +5,7 @@ import Safety from "@/app/(root)/(home)/_components/uspComponents/Safety";
 import Technology from "@/app/(root)/(home)/_components/uspComponents/Technology";
 import { ProductCardProps } from "@/components/Custom/ProductCard";
 import { Lift, ProductDetailsProps } from "@/types";
-import { IconCalendar, IconFileSmile, IconGlobe, IconMap, IconTruck } from "@tabler/icons-react";
+import { IconBuilding, IconCalendar, IconClipboardCheck, IconFileSmile, IconGlobe, IconMap, IconMapPin, IconSettings, IconTruck } from "@tabler/icons-react";
 import Image from "next/image";
 export const umbrellaPoints = [
     {
@@ -115,67 +115,42 @@ export const images: string[] = [
 
 
 
-  export const TestimonialHeader = ({ imageSrc, videoSrc, alt }: { imageSrc: string; videoSrc: string; alt: string }) => (
-    <div className="relative size-full min-h-[8rem]">
-      {/* Optimized Background Image */}
-      <Image
-        src={imageSrc}
-        alt={alt}
-        fill
-        className="absolute inset-0 object-cover transition-opacity duration-300 hover:opacity-0 opacity-100"
-        priority={false} // Lazy loads images
-        quality={80} // Optimized quality
-      />
 
-      {/* Hover Video */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 hover:opacity-100 opacity-0"
-        src={videoSrc}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-    </div>
-  );
 
   export const testimonials = [
     {
       id: 1,
-      title: "1000+ Lifts Installed",
-      subtitle: "Lifts seamlessly installed worldwide, transforming vertical mobility by 100%",
-      icon: <IconGlobe />,
-      header: <TestimonialHeader imageSrc="/images/testimonials/1.webp" videoSrc="/videos/testimonials/1.mp4" alt="Lift installation worldwide" />,
+      title: "350+ Lifts Installed",
+      subtitle: "Seamlessly enhancing vertical mobility with 350+ successful lift installations worldwide.",
+      icon: <IconBuilding  className="w-10 h-10 text-gold brightness-150"/>, // Represents infrastructure and buildings
     },
     {
       id: 2,
-      title: "700+ Happy Customers",
-      subtitle: "More than 700 customers have benefited from the enhanced convenience provided by our cutting-edge elevator solutions",
-      icon: <IconFileSmile />,
-      header: <TestimonialHeader imageSrc="/images/testimonials/2.webp" videoSrc="/videos/video1.mp4" alt="Happy customer using elevator" />,
+      title: "100+ Lifts in Transit",
+      subtitle: "Delivering convenience with 100+ lifts currently in transit to their destinations.",
+      icon: <IconTruck  className="w-10 h-10 text-gold brightness-150"/>, // Represents transportation and delivery
     },
     {
       id: 3,
-      title: "1500+ Services Delivered",
-      subtitle: "Reliable service excellence delivered with a 99% satisfaction rate, ensuring smooth operations",
-      icon: <IconTruck />,
-      header: <TestimonialHeader imageSrc="/images/testimonials/3.avif" videoSrc="/videos/video1.mp4" alt="Elevator service maintenance" />,
+      title: "256+ Projects Delivered",
+      subtitle: "Ensuring excellence with 256+ completed projects and a 99% satisfaction rate.",
+      icon: <IconClipboardCheck  className="w-10 h-10 text-gold brightness-150"/>, // Represents project completion and quality assurance
     },
     {
       id: 4,
-      title: "Available in 15+ Countries",
-      subtitle: "Serving 15+ countries with cutting-edge lift technology, setting new global standards",
-      icon: <IconMap />,
-      header: <TestimonialHeader imageSrc="/images/testimonials/4.webp" videoSrc="/videos/video1.mp4" alt="Global elevator company presence" />,
+      title: "700+ Lifts Under Modernization",
+      subtitle: "Upgrading 700+ lifts with state-of-the-art technology across 15+ countries.",
+      icon: <IconSettings  className="w-10 h-10 text-gold brightness-150"/>, // Represents upgrades and modernization
     },
     {
       id: 5,
-      title: "10+ Years",
-      subtitle: "A decade of innovation—100% commitment to precision engineering and safety",
-      icon: <IconCalendar />,
-      header: <TestimonialHeader imageSrc="/images/testimonials/5.webp" videoSrc="/videos/video1.mp4" alt="Celebrating 10 years of innovation" />,
+      title: "Presence in 8+ States",
+      subtitle: "Expanding our reach across Delhi NCR, Rajasthan, UP, Haryana, Maharashtra, Karnataka, MP, and Assam.",
+      icon: <IconMapPin  className="w-10 h-10 text-gold brightness-150"/>, // Represents geographical expansion and presence
     },
   ];
+
+
 
 
 
@@ -250,7 +225,7 @@ export const images: string[] = [
         ogImage: "/images/open-graph/opengraph-felix-page.png",
         ogImageAltText: "Felix Home Elevators – Elevate Your Lifestyle with Luxury & Comfort",
         heroHeading: "Felix Home Elevators – Elevate Your Lifestyle with Luxury & Comfort",
-        heroImage: "",
+        heroImage: "/images/imagesforwebsite/13.jpg",
         productTitle: "Felix",
         productSubHeading: "Elevate Your Lifestyle with Luxury & Comfort",
         productMiniHeading: "Luxury",
@@ -289,21 +264,21 @@ export const images: string[] = [
                 },
                 {
                     image: "/images/parrallax/4.webp",
-                    subHeading: "Elevate Your Home with Vaastu-Aligned Harmony",
-                    description: "Enhance your home’s energy, prosperity, and convenience by integrating Vaastu principles with modern home lifts. Beyond accessibility, a thoughtfully placed home lift influences the positive energy flow, creating a balanced and auspicious living space. By blending ancient wisdom with cutting-edge technology, you can elevate both your lifestyle and spiritual well-being. Experience seamless harmony where design meets destiny!"
+                    subHeading: "Elevate Your Home with Vastu-Aligned Harmony",
+                    description: "Enhance your home’s energy, prosperity, and convenience by integrating Vastu principles with modern home lifts. Beyond accessibility, a thoughtfully placed home lift influences the positive energy flow, creating a balanced and auspicious living space. By blending ancient wisdom with cutting-edge technology, you can elevate both your lifestyle and spiritual well-being. Experience seamless harmony where design meets destiny!"
                 },
                 {
-                    image: "/images/parrallax/4.webp",
+                    image: "/images/imagesforwebsite/31.jpg",
                     subHeading: "Seamless Elevation, Zero Compromise—Go For Pitlles & Headless Elevators",
                     description: "Integrating an elevator into a home can be challenging due to the need for a pit or machine room, often making traditional elevators unsuitable. However, pitless and shaftless elevators have emerged as the perfect solution for residences that cannot accommodate these structural modifications. With a sleek design and effortless installation, these innovative elevators provide unmatched convenience and accessibility—enhancing your home without the hassle of major renovations."
                 },
                 {
-                    image: "/images/parrallax/4.webp",
+                    image: "/images/imagesforwebsite/34.jpg",
                     subHeading: "Swift Emergency Lowering System",
                     description: "Stay safe and never get stranded! In the event of a power loss, our advanced Emergency Lowering System instantly detects the failure, cancels all active floor calls, and seamlessly switches to standby battery power. It smoothly lowers the elevator to the nearest landing, opens the doors, and allows passengers to exit within seconds—eliminating long wait times and uncertainty. The system then securely places the elevator out of service until power is restored, ensuring both safety and efficiency."
                 },
                 {
-                    image: "/images/parrallax/4.webp",
+                    image: "/images/imagesforwebsite/43.jpg",
                     subHeading: "AI-Assisted Smart Elevator: Elevating Intelligence, Enhancing Experience",
                     description: "AI-powered elevators revolutionize vertical mobility by optimizing efficiency, safety, and user experience. They analyze traffic patterns to reduce wait times, predict maintenance needs to prevent breakdowns, and personalize rides for seamless navigation. AI enhances energy efficiency by adjusting power usage and integrating with smart building systems. In emergencies, it ensures quick, automated responses for passenger safety. With features like touchless operation, IoT connectivity, and real-time data processing, AI-assisted smart elevators deliver faster, safer, and more sustainable transportation. Elevate your experience with cutting-edge intelligence that adapts, learns, and enhances every ride!"
                 },
@@ -314,7 +289,7 @@ export const images: string[] = [
         ogImage: "/images/open-graph/opengraph-felix-2-page.png",
         ogImageAltText: "Felix 2.0 – Redefining Home Elevators with Innovation & Style",
         heroHeading: "Felix 2.0 – Redefining Home Elevators with Innovation & Style",
-        heroImage: "",
+        heroImage: "/images/imagesforwebsite/44.jpg",
         productTitle: "Felix-2.0",
         productSubHeading: "Redefining Home Elevators with Innovation & Style",
         productMiniHeading: "Innovation",
@@ -344,13 +319,13 @@ export const images: string[] = [
           "Felix-2.0 features a gearless traction system with AI-assisted precision, ensuring a smoother, quieter, and longer-lasting elevator experience without the need for deep pits or traditional steel cables.",
         sections: [
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/45.jpg",
             subHeading: "How Exactly Does a Gearless Traction Elevator Work?",
             description:
               "Felix-2.0 uses a gearless traction system, which eliminates the need for traditional steel cables. Instead, it employs a high-durability belt drive mechanism that significantly reduces wear and tear. This technology ensures a smooth, efficient ride while enhancing the longevity of the elevator system."
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/2.jpg",
             subHeading: "Vastu-Compliant Compact Design for Modern Homes",
             description:
               "The Felix-2.0 is designed with a Vastu-compliant compact structure, allowing for seamless integration into modern home layouts. It provides an elegant and space-efficient solution without the need for pits or headroom, making it an excellent choice for premium residences."
@@ -362,13 +337,13 @@ export const images: string[] = [
               "Felix-2.0 incorporates AI-driven error detection, allowing for real-time system monitoring. This ensures predictive maintenance, reducing downtime and enhancing safety. The smart diagnostic system can detect irregularities before they become major issues, optimizing long-term performance."
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/interiors.webp/int5.webp",
             subHeading: "Silent Operation with Advanced Braking System",
             description:
               "Equipped with modern braking technology, Felix-2.0 offers whisper-quiet operation. Its gearless traction system minimizes vibrations and noise, making it an ideal choice for noise-sensitive environments such as luxury homes and apartments."
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/interiors.webp/int2.webp",
             subHeading: "Sleek Design with Customizable Interiors",
             description:
               "Felix-2.0 combines aesthetics with functionality, offering sleek designs and customizable interiors. Whether you prefer a contemporary or classic look, the elevator can be tailored to match your home’s aesthetic preferences."
@@ -380,14 +355,15 @@ export const images: string[] = [
         ogImage: "/images/open-graph/opengraph-climber-x-page.png",
         ogImageAltText: "",
         heroHeading: "Climber-X Stair Lift – Effortless Mobility, Ultimate Independence",
-        heroImage: "",
+        heroImage: "/images/imagesforwebsite/48.webp",
         productTitle: "Climber-X",
         productSubHeading: "Effortless Mobility, Ultimate Independence",
         productMiniHeading: "Ultimate",
         productDescription:
           "Climber-X is a smart stair lift designed for seamless vertical mobility in homes and public spaces. Engineered with an advanced rack-and-pinion system, it effortlessly adapts to both straight and curved staircases. With AI-assisted technology, it offers smooth and precise movements, ensuring safety and reliability. Featuring a compact and pitless design, it integrates seamlessly into any architectural space while maximizing accessibility and ease of use.",
         carouselImages: [
-          "/images/luxury/felix.webp",
+          "/images/imagesforwebsite/47.webp",
+          "/images/imagesforwebsite/49.webp",
           "/images/luxury/felix2.png",
           "/images/luxury/felix.webp",
           "/images/luxury/felix2.png"
@@ -410,31 +386,31 @@ export const images: string[] = [
           "Climber-X is an innovative stair lift with AI-assisted precision, ensuring smooth and reliable stair mobility while maximizing safety and comfort.",
         sections: [
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/48.webp",
             subHeading: "How Does Climber-X Work?",
             description:
               "Climber-X utilizes a state-of-the-art rack-and-pinion drive system, ensuring smooth, safe, and efficient stair mobility. With AI-powered controls, it adapts intelligently to the user's movements and staircase conditions, making vertical transportation effortless."
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/50.webp",
             subHeading: "Seamless Installation, No Structural Changes Required",
             description:
               "Designed for convenience, Climber-X requires no pit or shaft, making it the perfect solution for existing staircases. Its compact form factor ensures a hassle-free installation process with minimal modifications."
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/luxury/climberx.png",
             subHeading: "AI-Powered Smart Controls",
             description:
               "With integrated AI technology, Climber-X optimizes movement efficiency, reduces energy consumption, and ensures automated error detection. This makes it one of the most intelligent stair lift solutions on the market."
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/49.webp",
             subHeading: "Reliable Battery Backup for Power Failures",
             description:
               "Climber-X ensures uninterrupted functionality even during power outages with its robust battery backup system. Users can rely on its seamless performance for complete peace of mind."
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/47.webp",
             subHeading: "Designed for Maximum Safety & Comfort",
             description:
               "Engineered with global safety standards in mind, Climber-X features a secure seating system, intuitive control mechanisms, and a whisper-quiet motor for a smooth and pleasant riding experience."
@@ -446,15 +422,15 @@ export const images: string[] = [
         ogImage: "/images/open-graph/opengraph-vacuum-100-page.png",
         ogImageAltText: "",
         heroHeading: "Vacuum 100 Pneumatic Lift – The Future of Elevators, Powered by Air",
-        heroImage: "",
+        heroImage: "/images/imagesforwebsite/56.jpg",
         productTitle: "Pneumatic-Elevator",
         productSubHeading: "The Future of Elevators, Powered by Air",
         productMiniHeading: "Future",
         productDescription:
           "The Pneumatic-Elevator is a futuristic vertical mobility solution powered by vacuum technology. Designed for homes and offices, it eliminates the need for machine rooms, cables, or counterweights. Its sleek, self-supporting structure enhances architectural aesthetics while ensuring whisper-quiet performance. AI-assisted smart controls and advanced safety features make it a perfect choice for those seeking luxury, convenience, and efficiency in an eco-friendly package.",
         carouselImages: [
-          "/images/luxury/felix.webp",
-          "/images/luxury/felix2.png",
+          "/images/luxury/pneumatic.webp",
+          "/images/imagesforwebsite/52.webp",
           "/images/luxury/felix.webp",
           "/images/luxury/felix2.png",
           "/images/luxury/felix2.png",
@@ -478,35 +454,35 @@ export const images: string[] = [
           "The Pneumatic-Elevator redefines vertical mobility with AI-powered vacuum technology, delivering a seamless, cable-free, and eco-friendly lift experience.",
         sections: [
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/53.webp",
             subHeading: "How Pneumatic Elevators Work",
             description:
               "Pneumatic elevators use advanced vacuum technology to lift and lower the cabin. Unlike traditional systems, they operate without cables or counterweights, relying on air pressure differentials for movement. This ensures smooth, silent, and energy-efficient travel."
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/54.webp",
             subHeading: "Space-Saving & Self-Supporting Design",
             description:
               "With a sleek, self-contained structure, Pneumatic-Elevators require no machine rooms, making them ideal for modern homes with limited space. The cylindrical design blends seamlessly into any architectural aesthetic."
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/luxury/pneumatic.webp",
             subHeading: "Smart AI-Assisted Controls",
             description:
               "AI-enhanced navigation ensures optimal performance by analyzing usage patterns and adjusting travel speed. Predictive maintenance and automated safety checks provide peace of mind for users."
           },
-          {
-            image: "/images/parrallax/4.webp",
-            subHeading: "Vastu-Compliant for Harmonious Living",
-            description:
-              "Designed with Vastu principles in mind, Pneumatic-Elevators promote positive energy flow within your home, enhancing well-being while offering luxurious vertical mobility."
-          },
-          {
-            image: "/images/parrallax/4.webp",
-            subHeading: "Eco-Friendly & Energy Efficient",
-            description:
-              "Powered by vacuum technology, these elevators consume minimal energy, reducing their carbon footprint. Their innovative design eliminates the need for lubrication, making them a sustainable choice."
-          }
+        //   {
+        //     image: "/images/parrallax/4.webp",
+        //     subHeading: "Vastu-Compliant for Harmonious Living",
+        //     description:
+        //       "Designed with Vastu principles in mind, Pneumatic-Elevators promote positive energy flow within your home, enhancing well-being while offering luxurious vertical mobility."
+        //   },
+        //   {
+        //     image: "/images/parrallax/4.webp",
+        //     subHeading: "Eco-Friendly & Energy Efficient",
+        //     description:
+        //       "Powered by vacuum technology, these elevators consume minimal energy, reducing their carbon footprint. Their innovative design eliminates the need for lubrication, making them a sustainable choice."
+        //   }
         ]
       },
       {
@@ -514,15 +490,15 @@ export const images: string[] = [
         ogImage: "/images/open-graph/opengraph-elivio-page.png",
         ogImageAltText: "",
         heroHeading: "Elivio with Machine Room – High-Performance Lifting for Commercial Spaces",
-        heroImage: "",
+        heroImage: "/images/imagesforwebsite/57.webp",
         productTitle: "Elivio",
         productSubHeading: "High-Performance Lifting for Commercial Spaces",
         productMiniHeading: "High-Performance",
         productDescription:
           "Elivio is a robust, AI-assisted smart elevator designed for commercial, residential, and industrial applications. Featuring German-engineered traction technology, it delivers unparalleled performance, efficiency, and durability. With an advanced control system, Elivio offers seamless vertical mobility while maintaining superior safety standards. Ideal for high-rise buildings, it ensures reliability, energy efficiency, and a customizable modern aesthetic.",
         carouselImages: [
-          "/images/luxury/felix.webp",
-          "/images/luxury/felix2.png",
+          "/images/commercial/elivio.webp",
+          "/images/commercial/elivio2.webp",
           "/images/luxury/felix.webp",
           "/images/luxury/felix2.png",
         ],
@@ -544,31 +520,31 @@ export const images: string[] = [
           "Elivio is built with German-engineered traction technology, delivering unmatched efficiency, safety, and durability—making it the ideal choice for high-rise buildings and modern infrastructure.",
         sections: [
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/59.jpg",
             subHeading: "Advanced Traction Technology for Seamless Rides",
             description:
               "Elivio's state-of-the-art traction technology ensures smooth, efficient, and whisper-quiet rides. Engineered with German precision, this system provides superior load management, enhanced safety, and minimal energy consumption, making it the ideal choice for both commercial and residential buildings.",
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/60.jpg",
             subHeading: "Eco-Smart Energy Efficiency",
             description:
               "Elivio elevators incorporate eco-smart technology to minimize power consumption without compromising performance. The intelligent system optimizes energy use, contributing to sustainability while reducing operational costs for users.",
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/61.jpg",
             subHeading: "AI-Powered Real-Time Monitoring",
             description:
               "With AI-assisted diagnostics and real-time monitoring, Elivio ensures predictive maintenance, minimizing downtime and maximizing efficiency. The smart system continuously analyzes elevator performance, proactively detecting and addressing potential issues.",
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/62.jpg",
             subHeading: "Next-Gen Safety & Braking System",
             description:
               "Elivio prioritizes passenger safety with an advanced braking system and multi-layered safety protocols. In case of emergencies, the system ensures controlled deceleration and secure landing, offering a worry-free riding experience.",
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/interiors.webp/int2.webp",
             subHeading: "Bigger Cabin for Enhanced Comfort",
             description:
               "Designed with user comfort in mind, Elivio features one of the largest cabins available, providing ample space for passengers while maintaining a sleek and modern aesthetic.",
@@ -580,15 +556,15 @@ export const images: string[] = [
         ogImage: "/images/open-graph/opengraph-elivio-2-page.png",
         ogImageAltText: "",
         heroHeading: "Elivio 2.0 Without Machine Room – Space-Saving Excellence, Uncompromised Power",
-        heroImage: "",
+        heroImage: "/images/imagesforwebsite/57.webp",
         productTitle: "Elivio-2.0",
         productSubHeading: "Space-Saving Excellence, Uncompromised Power",
         productMiniHeading: "Power",
         productDescription:
           "Elivio-2.0 is a next-generation smart elevator featuring a gearless traction system for ultra-smooth and efficient operation. Designed with AI-assisted controls, it offers intelligent monitoring, error-free diagnostics, and seamless mobility. Its machine-room-less structure and pitless design make it ideal for modern commercial and residential spaces, ensuring energy-efficient vertical transportation with premium aesthetics.",
         carouselImages: [
-          "/images/luxury/felix.webp",
-          "/images/luxury/felix2.png",
+          "/images/imagesforwebsite/72.jpg",
+          "/images/imagesforwebsite/71.jpg",
           "/images/luxury/felix.webp",
           "/images/luxury/felix2.png",
         ],
@@ -610,31 +586,31 @@ export const images: string[] = [
           "Elivio-2.0 redefines modern elevators with AI-assisted smart controls, energy efficiency, and a gearless, machine-room-less design for seamless and sustainable vertical mobility.",
         sections: [
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/70.jpg",
             subHeading: "Gearless Machine-Room-Less Technology",
             description:
               "Elivio-2.0 uses an advanced gearless traction system, eliminating the need for a machine room. This innovation reduces space requirements while enhancing efficiency and smooth operation.",
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/72.jpg",
             subHeading: "AI-Assisted Smart Elevator",
             description:
               "With AI-driven real-time monitoring and intelligent diagnostics, Elivio-2.0 ensures proactive maintenance, error-free operation, and a seamless elevator experience.",
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/73.jpg",
             subHeading: "Ultra-Quiet Precision Ride",
             description:
               "Experience whisper-quiet movement with Elivio-2.0’s high-precision traction system, delivering a smooth and noise-free ride for enhanced comfort.",
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/70.jpg",
             subHeading: "Eco-Smart & Energy Efficient",
             description:
               "Elivio-2.0 is designed with an eco-friendly approach, consuming minimal power while ensuring optimal performance, making it a sustainable choice for modern structures.",
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/interiors.webp/int5.webp",
             subHeading: "Advanced Safety & Emergency Systems",
             description:
               "Equipped with intelligent safety mechanisms, automatic emergency braking, and power failure backup, Elivio-2.0 prioritizes passenger security and reliability.",
@@ -646,15 +622,15 @@ export const images: string[] = [
         ogImage: "/images/open-graph/opengraph-eleventra-page.png",
         ogImageAltText: "",
         heroHeading: "Eleventra Elevator – Heavy-Duty Lifting for Goods, Cars & More",
-        heroImage: "",
+        heroImage: "/images/imagesforwebsite/67.jpg",
         productTitle: "Eleventra",
         productSubHeading: "Heavy-Duty Lifting for Goods, Cars & More",
         productMiniHeading: "Heavy-Duty",
         productDescription:
           "The Eleventra Commercial Lift is a state-of-the-art elevator designed for heavy-duty use, perfect for car lifts, stretchers, and goods transport in high-end commercial and industrial spaces. With cutting-edge gearless traction technology, it delivers smooth, fast, and energy-efficient vertical transportation. Its robust build, combined with advanced safety features and intelligent controls, ensures seamless performance under demanding conditions. The Eleventra is designed for durability, with a pitless and machine-room-less structure for maximum space utilization and flexibility.",
         carouselImages: [
-          "/images/luxury/felix.webp",
-          "/images/luxury/felix2.png",
+          "/images/commercial/eleventra.webp",
+          "/images/imagesforwebsite/68.jpg",
           "/images/luxury/felix.webp",
           "/images/luxury/felix2.png"
         ],
@@ -675,35 +651,29 @@ export const images: string[] = [
           "Eleventra is a high-performance commercial elevator designed for large-scale operations, featuring advanced AI-powered diagnostics, robust safety features, and energy-efficient technology.",
         sections: [
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/68.jpg",
             subHeading: "Gearless Traction Technology for Ultimate Performance",
             description:
               "Eleventra uses state-of-the-art gearless traction technology, ensuring smooth, energy-efficient, and high-speed vertical transportation. This advanced system reduces maintenance costs while improving overall reliability and durability."
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/64.webp",
             subHeading: "AI-Powered Smart Diagnostics",
             description:
               "Equipped with cutting-edge AI algorithms, Eleventra continuously monitors system performance, predicting potential failures before they occur. This ensures maximum uptime, reducing maintenance costs and enhancing operational efficiency."
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/66.webp",
             subHeading: "Designed for Heavy-Duty Applications",
             description:
               "With high load capacity and advanced safety features, Eleventra is ideal for commercial spaces, car lifts, and industrial environments. Its robust build ensures seamless operation under the most demanding conditions."
           },
           {
-            image: "/images/parrallax/4.webp",
+            image: "/images/imagesforwebsite/69.jpg",
             subHeading: "Smart Controls for Seamless Operations",
             description:
               "Eleventra's intelligent control system optimizes elevator performance with automated error detection, real-time efficiency adjustments, and smart energy-saving mechanisms. Experience hassle-free operations with minimal human intervention."
           },
-          {
-            image: "/images/parrallax/4.webp",
-            subHeading: "Pitless & Machine-Room-Less Flexibility",
-            description:
-              "Unlike traditional elevators, Eleventra offers a pitless and machine-room-less design, making it the perfect solution for buildings where space constraints are a concern. Maximize usable space without compromising on performance."
-          }
         ]
       }
   ];

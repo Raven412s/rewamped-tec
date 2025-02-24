@@ -13,7 +13,7 @@ import Image from "next/image";
 
 
 const ImageHeader = ({ src }: { src: string }) => (
-<div className="relative w-full h-full min-h-[12rem] rounded-xl overflow-hidden">
+<div className="relative w-full h-full min-h-[10rem] rounded-xl overflow-hidden">
   <Image
     src={src}
     alt="Elevator"
@@ -61,7 +61,7 @@ const gridItems = [
             <FlipWords
                  words={[
                    "Safest Elevators in India",
-                   "Vaastu Compliant",
+                   "Vastu Compliant",
                    "Energy Efficient",
                    "Assisted by Alexa",
                  ]}
@@ -76,14 +76,14 @@ const gridItems = [
   {
     title: "Safety First",
     description: "Advanced security features to protect every ride.",
-    header: <Skeleton />,
+    header: <ImageHeader src="/images/usp/safety.webp" />,
     icon: <IconShieldCheck className="h-6 w-6 text-gold" />,
     className: "md:row-span-2", // Vertical image
   },
   {
     title: "Energy Efficient",
     description: "Eco-friendly elevators reducing power consumption.",
-    header: <Skeleton />,
+    header: <ImageHeader src="/images/usp/energy.webp" />,
     icon: <IconBolt className="h-6 w-6 text-gold" />,
   },
 ];

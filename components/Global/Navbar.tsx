@@ -47,7 +47,7 @@ const Navbar = () => {
 
   const handleNavigation = (path: string) => {
     if(path === "/home"){
-        router.back()
+        router.push("/")
     } else {
         router.push(path);
     }

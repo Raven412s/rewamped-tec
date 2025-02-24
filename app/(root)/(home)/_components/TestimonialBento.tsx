@@ -1,6 +1,6 @@
 "use client";
 
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import { BentoGrid, BentoGridItem } from "@/components/Custom/bento-grid";
 import { testimonials } from "@/data";
 
 export function TestimonialBento() {
@@ -13,7 +13,6 @@ export function TestimonialBento() {
           title={item.title}
           description={item.subtitle}
           icon={item.icon}
-          header={item.header}
         //   className={item.className}
         />
       ))}
