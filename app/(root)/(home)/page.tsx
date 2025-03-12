@@ -40,17 +40,6 @@ export default function Home() {
             </Bounded>
         </GridBg>
     </div>
-
-    <div className="bg-golden-400 py-12 px-8 text-neutral-950">
-      <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl capitalize py-2 text-center bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150 pb-10">
-        Our Presence
-      </h2>
-      <div className="text-foreground text-center my-4 text-4xl ">
-        We are present in 8 states in India
-      </div>
-
-    </div>
-
     <CardParallax/>
     <Bounded className="relative lg:hidden z-20   min-h-screen w-full flex flex-col ">
     <h1

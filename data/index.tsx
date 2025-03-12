@@ -732,24 +732,19 @@ export const images: string[] = [
     {
         title: "Custom Elevator Design",
         body: "Design and manufacture custom elevators to meet your building's unique needs.",
-        src: "interior/3.webp",
+        src: "services/3.webp",
         icon: "design"
     },
     {
         title: "Home Elevators",
         body: "Compact and stylish elevators designed for private residences and villas.",
-        src: "services/2.mp4",
+        src: "services/int4.webp",
         icon: "home"
     },
-    // {
-    //     title: "Dumbwaiters",
-    //     body: "Small service elevators for hotels, hospitals, and restaurants.",
-    //     src: "product/felix.webp"
-    // },
     {
         title: "Emergency Rescue Systems",
         body: "Safety systems for power failures and emergencies, ensuring passenger safety.",
-        src: "services/4.mp4",
+        src: "services/6.jpg",
         icon: "emergency"
     },
     {
