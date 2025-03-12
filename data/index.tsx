@@ -5,8 +5,7 @@ import Safety from "@/app/(root)/(home)/_components/uspComponents/Safety";
 import Technology from "@/app/(root)/(home)/_components/uspComponents/Technology";
 import { ProductCardProps } from "@/components/Custom/ProductCard";
 import { Lift, ProductDetailsProps } from "@/types";
-import { IconBuilding, IconCalendar, IconClipboardCheck, IconFileSmile, IconGlobe, IconMap, IconMapPin, IconSettings, IconTruck } from "@tabler/icons-react";
-import Image from "next/image";
+import { IconBuilding, IconClipboardCheck, IconMapPin, IconSettings, IconTruck } from "@tabler/icons-react";
 export const umbrellaPoints = [
     {
       title: "Innovative and Customizable Solutions",
