@@ -39,7 +39,7 @@ const gridItems = [
     {
       title: "Smart Elevators",
       description: "Intelligent technology for faster, safer, and more efficient elevator rides.",
-      header: <ImageHeader src="/images/parrallax/12.jpg"/>,
+      header: <ImageHeader src="/images/imagesforwebsite/46.webp"/>,
       icon: <IconBrain className="h-6 w-6 text-gold" />,
       className: "row-span-2 bg-background", // Vertical image
     },
