@@ -39,8 +39,8 @@ export default function GalleryPage() {
                         <Image
                             src={`/gallery/${image}`}
                             alt={`Gallery Image ${index + 1}`}
-                            layout="fill"
-                            objectFit="cover"
+                            fill
+                            style={{ objectFit: "cover" }}
                             className="rounded-md shadow-lg"
                         />
                     </div>

@@ -15,8 +15,8 @@ const CommercialLifts = () => {
               <Image
                 src="/images/commercial/elivio.webp"
                 alt="Elivio"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
                 className="animate-pan"
               />
             </div>
@@ -24,8 +24,8 @@ const CommercialLifts = () => {
               <Image
                 src="/images/commercial/eleventra.webp"
                 alt="Eleventra"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
                 className="animate-pan"
               />
             </div>

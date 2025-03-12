@@ -49,13 +49,16 @@ export default function Template({ children }: TemplateProps) {
         ref={logoRef}
         className="fixed inset-0 flex items-center justify-center z-[9999] bg-background"
       >
-        <div className="w-48 aspect-square relative">
-        <Image
-            src="/images/the-elevator-company.png"
-            alt="Logo"
-            fill
-            className="object-contain"
-        />
+<div className="relative w-48 h-48"> {/* Ensure explicit width and height */}
+  <Image
+    src="/images/the-elevator-company.png"
+    alt="Logo"
+    fill
+    priority
+    className="object-contain"
+  />
+
+
         </div>
       </div>
 

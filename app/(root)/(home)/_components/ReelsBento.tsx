@@ -1,5 +1,4 @@
 "use client";
-
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import {
     IconAi,
@@ -7,8 +6,6 @@ import {
     IconBuilding
 } from "@tabler/icons-react";
 import Image from "next/image";
-
-
 const ImageHeader = ({ src }: { src: string }) => (
     <div className="relative w-full h-full min-h-[12rem] rounded-xl overflow-hidden">
       <Image
@@ -20,10 +17,6 @@ const ImageHeader = ({ src }: { src: string }) => (
       />
     </div>
       );
-
-  const Skeleton = () => (
-    <div className="w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
-  );
 
 export function ReelsBento() {
   return (

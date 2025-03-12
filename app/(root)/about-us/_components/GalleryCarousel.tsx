@@ -52,8 +52,8 @@ const GalleryCarousel = () => {
                 <Image
                   src={slide}
                   alt={`Slide ${index + 1}`}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                   className="rounded-lg shadow-md"
                   loading="lazy"
                 />

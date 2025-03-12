@@ -33,10 +33,10 @@ const AboutPage = () => {
     <Image
       src="/images/hero-bg.webp"
       alt="Hero Background"
-      layout="fill"
-      objectFit="cover"
+      fill
+      style={{ objectFit: "cover" }}
       quality={90}
-      priority
+      loading="lazy"
       className="z-0"
     />
 
@@ -99,15 +99,43 @@ const AboutPage = () => {
       </h2>
       <div className="flex flex-wrap justify-center gap-6">
   {[
-    { title: "23+ Years", subtitle: "of Experience" },
-    { title: "13,000+", subtitle: "Elevators Installed" },
-    { title: "25,000+", subtitle: "Services Catered" },
-    { title: "14000+", subtitle: "Happy Clients" },
+    { title: "350+", subtitle: "Elevators Installed" },
+    { title: "100+", subtitle: "Elevators under transit" },
+    { title: "256+", subtitle: "Projects Delivered" },
+    { title: "700+", subtitle: "Elevators under modernization" },
+    { title: "We are in 8 States", subtitle: "" },
   ].map((item, index) => (
     <div key={index} className="p-6 shadow-md rounded-lg w-60 text-center bg-gradient-to-br from-zinc-800 to-slate-900">
       <h4 className="text-2xl font-bold text-foreground">{item.title}</h4>
       <p className="mt-2 text-foreground">{item.subtitle}</p>
     </div>
+  ))}
+</div>
+
+    </div>
+
+    {/* Our Presence */}
+    <div className="bg-golden-400 py-12 px-8 text-neutral-950">
+      <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl capitalize py-2 text-center bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150 pb-10">
+        Our Presence
+      </h2>
+    <div className="text-foreground text-center my-4 text-4xl ">We are present in 8 states in India</div>
+      <div className="flex flex-wrap justify-center gap-6">
+  {[
+    { title: "Delhi NCR", subtitle: "" },
+    { title: "Rajasthan", subtitle: "" },
+    { title: "Uttar Pradesh", subtitle: "" },
+    { title: "Haryana", subtitle: "" },
+    { title: "Maharashtra", subtitle: "" },
+    { title: "Karnataka", subtitle: "" },
+    { title: "Madhya Pradesh", subtitle: "" },
+    { title: "Assam", subtitle: "" },
+
+  ].map((item, index) => (
+        <div key={index} className="p-6 shadow-md rounded-lg  text-center bg-gradient-to-br from-zinc-800 to-slate-900">
+          <h4 className="text-2xl font-bold text-foreground w-max">{item.title}</h4>
+          <p className="mt-2 text-foreground">{item.subtitle}</p>
+        </div>
   ))}
 </div>
 

@@ -1,5 +1,4 @@
 "use client";
-
 import { BigDotsBg } from "@/components/Assets/BigDotsBg";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { FlipWords } from "@/components/ui/flip-words";
@@ -11,7 +10,6 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 
-
 const ImageHeader = ({ src }: { src: string }) => (
 <div className="relative w-full h-full min-h-[10rem] rounded-xl overflow-hidden">
   <Image
@@ -22,10 +20,6 @@ const ImageHeader = ({ src }: { src: string }) => (
     className="object-cover scale-110 hover:scale-100 transition-transform duration-500"
   />
 </div>
-  );
-
-  const Skeleton = () => (
-    <div className="w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
   );
 
 export function ElevatorBentoGrid() {

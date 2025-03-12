@@ -34,8 +34,8 @@ export function ProductCard({ title, description, moreInfo, imageUrl, type }: Pr
         <Image
           src={imageUrl}
           alt={title}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           loading="lazy"
           className="rounded-b-3xl"
         />

@@ -15,8 +15,8 @@ const LuxuryHomeLifts = () => {
               <Image
                 src="/images/luxury/felix.webp"
                 alt="Felix"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
                 className="animate-pan"
               />
             </div>
@@ -24,8 +24,8 @@ const LuxuryHomeLifts = () => {
               <Image
                 src="/images/luxury/climberx.png"
                 alt="Climber X"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: "cover" }}
                 className="animate-pan"
               />
             </div>

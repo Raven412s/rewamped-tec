@@ -9,10 +9,6 @@ import styles from './page.module.scss';
 import { images } from '@/data';
 import { ColumnProps, Dimension } from '@/types';
 
-
-
-
-
 export default function SmoothScroll() {
   const gallery = useRef<HTMLDivElement | null>(null);
   const [dimension, setDimension] = useState<Dimension>({ width: 0, height: 0 });

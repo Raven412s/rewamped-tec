@@ -118,7 +118,7 @@ const Navbar = () => {
                 alt="The Elevator Company Logo"
                 width={48}
                 height={48}
-                priority
+                loading="lazy"
                 className="w-12 h-auto"
               />
               <p className="text-lg font-bold">The Elevator Company</p>

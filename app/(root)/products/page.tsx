@@ -20,7 +20,7 @@ const ProductsPage = () => {
         <PreferredStructure/>
         <OurProducts/>
         <div id="products">
-        <ProductsCardArray/>
+            <ProductsCardArray/>
         </div>
     </div>
   );

@@ -30,17 +30,13 @@ const ProductsPageSmartSlide = () => {
       <SheetContent className='!w-[100vw] !h-screen ' side={"bottom"}>
         <div className="max-w-3xl relative z-20 mx-auto p-6 mt-10 bg-neutral-900 border border-neutral-800 rounded-lg shadow-2xl shadow-behind ">
         <SheetHeader>
-          <SheetTitle>
-          <h1 className="font-display  font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase text-center mb-10  bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150">
-        AI-Powered & Alexa-Integrated Elevators
-      </h1>
+          <SheetTitle className="font-display  font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase text-center mb-10  bg-clip-text text-transparent bg-gradient-to-b from-gold via-gold to-neutral-900 brightness-150">
+             AI-Powered & Alexa-Integrated Elevators
           </SheetTitle>
-          <SheetDescription>
-          <p className="text-neutral-500 max-w-lg mx-auto my-4 text-sm text-center">
-        **The Elevator Company** brings the future to your building with AI-driven
-        **smart elevators** that integrate seamlessly with Alexa. Experience hands-free
-        control, real-time optimization, and predictive maintenance like never before.
-      </p>
+          <SheetDescription className="text-neutral-500 max-w-lg mx-auto my-4 text-sm text-center">
+              **The Elevator Company** brings the future to your building with AI-driven
+              **smart elevators** that integrate seamlessly with Alexa. Experience hands-free
+              control, real-time optimization, and predictive maintenance like never before.
           </SheetDescription>
         </SheetHeader>
         <ul className="text-neutral-400 max-w-lg mx-auto my-4 text-sm space-y-2">
@@ -50,10 +46,7 @@ const ProductsPageSmartSlide = () => {
         <li>✅ **IoT & Cloud Connectivity** for remote monitoring</li>
         <li>✅ **Enhanced Security** with AI-assisted access</li>
       </ul>
-        <SheetFooter>
-        <p className="text-neutral-500 max-w-lg mx-auto my-4 text-sm text-center">
-        Elevate your experience with cutting-edge technology—because your building deserves the best.
-      </p>
+        <SheetFooter className="text-neutral-500 max-w-lg mx-auto my-4 text-sm text-center">
           <SheetClose asChild>
             <Button type="button" onClick={()=>router.push(`#products`)}>View Products</Button>
           </SheetClose>

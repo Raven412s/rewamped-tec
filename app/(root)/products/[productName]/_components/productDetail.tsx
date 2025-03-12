@@ -32,8 +32,8 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
             <Image
               src={heroImage}
               alt="Hero"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               className="absolute inset-0 z-0 brightness-75"
               priority
             />

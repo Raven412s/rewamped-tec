@@ -91,7 +91,8 @@ export default function Footer() {
                                     alt="The Elevator Company Logo"
                                     width={256}
                                     height={256}
-                                    priority
+                                    loading="lazy"
+                                    quality={60}
                                     className="object-contain"
                                 />
                             </div>
