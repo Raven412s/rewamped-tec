@@ -99,7 +99,7 @@ export const umbrellaPoints = [
     },
     {
         id: 3,
-        image: '/images/parrallax/3.webp',
+        image: '/images/imagesforwebsite/44.jpg',
         title: 'Unleashing Vertical Freedom',
         subtitle: 'Leading the future of vertical transport with advanced technology.',
     }
