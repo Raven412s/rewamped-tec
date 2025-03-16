@@ -3,7 +3,7 @@ import { MdOutlinePolicy } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { FaBook, FaCamera, FaEnvelope, FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaBook, FaCamera, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { DotBg } from "../Assets/DotBg";
 import QuotationDrawer from "../Custom/QuotationDrawer";
 import {
@@ -132,6 +132,11 @@ export default function Footer() {
                                     <Link href="https://wa.me/+919310229056?text=Hello%20there!%20I%20wanted%20to%20contact%20you." target="_blank">
                                         <span className="flex gap-2 flex-row items-center justify-center sm:justify-start">
                                             <FaWhatsapp /> WhatsApp
+                                        </span>
+                                    </Link>
+                                    <Link href="https://www.linkedin.com/company/the-elevator-company/?viewAsMember=true" target="_blank">
+                                        <span className="flex gap-2 flex-row items-center justify-center sm:justify-start">
+                                            <FaLinkedin /> LinkedIn
                                         </span>
                                     </Link>
                                 </div>
