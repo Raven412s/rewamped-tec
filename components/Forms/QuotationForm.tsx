@@ -74,7 +74,7 @@ export default function QuotationForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-3xl mx-auto py-10">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-3xl mx-auto py-10 hide-scrollbar">
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-6">
             <FormField control={form.control} name="firstName" render={({ field }) => (

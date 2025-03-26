@@ -33,9 +33,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressContentEditableWarning suppressHydrationWarning>
+    <html lang="en" >
       <body
         className={cn("antialiased dark", montserrat.variable, redHatDisplay.variable)}
+        suppressContentEditableWarning suppressHydrationWarning
       >
         <NavFooterWrapper>
         <Toaster position="top-center" richColors />

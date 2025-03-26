@@ -121,3 +121,26 @@ body {
   .about-subtext {
     @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center  text-lg md:max-w-[34rem];
   }
+
+  .hide-scrollbar {
+    scrollbar-width: none; /* For Firefox */
+    scrollbar-color: transparent transparent; /* Thumb and track color */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.hide-scrollbar::-webkit-scrollbar {
+    width: 0; /* Adjust width as needed */
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent; /* Scrollbar thumb color */
+    border-radius: 0;
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: transparent; /* Darker on hover */
+}
+
+.hide-scrollbar::-webkit-scrollbar-track {
+    background: transparent; /* Scrollbar track color */
+}
