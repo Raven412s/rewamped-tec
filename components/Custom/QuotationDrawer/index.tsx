@@ -13,11 +13,17 @@ import {
   } from "@/components/ui/alert-dialog"
   import { Button } from "@/components/ui/button"
 
-  export function QuotationDrawer() {
+  export function QuotationDrawer({
+    triggerText,
+  }: {
+    triggerText?: string;
+  }) {
     return (
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <Button variant="outline">Show Dialog</Button>
+        <Button variant="outline" className="bg-gold hover:bg-gold/90">
+          {triggerText || "Get your quotation"}
+        </Button>
         </AlertDialogTrigger>
         <AlertDialogContent>
           <AlertDialogHeader>

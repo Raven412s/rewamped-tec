@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import QuotationDrawer from "@/components/Custom/QuotationDrawer";
+import {QuotationDrawer} from "@/components/Custom/QuotationDrawer";
 import Bounded from "@/components/HOC/Bounded";
 import { Metadata } from "next";
 import GalleryCarousel from "./_components/GalleryCarousel";
