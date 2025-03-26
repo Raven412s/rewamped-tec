@@ -194,7 +194,7 @@ export default function QuotationForm() {
         </Button>
 
         <AlertDialogCancel asChild>
-        <Button disabled={isSubmitting} variant={"destructive"}>
+        <Button disabled={isSubmitting} variant={"destructive"} type="button" size={"lg"}>
           Cancel
         </Button>
         </AlertDialogCancel>
