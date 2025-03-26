@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { FaBook, FaCamera, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { DotBg } from "../Assets/DotBg";
-import QuotationDrawer from "../Custom/QuotationDrawer";
+import {QuotationDrawer} from "../Custom/QuotationDrawer";
 import {
     Card,
     CardContent,

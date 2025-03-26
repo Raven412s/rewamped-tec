@@ -18,10 +18,8 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
   carouselImages,
   productDescription,
   productFeatures,
-  productMiniHeading,
   productSubHeading,
   productTitle,
-  productSpecialFeature,
   sections,
 }) => {
   return (

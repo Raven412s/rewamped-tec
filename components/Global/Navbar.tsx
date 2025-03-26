@@ -1,6 +1,6 @@
 "use client";
 
-import QuotationDrawer from "@/components/Custom/QuotationDrawer";
+import {QuotationDrawer} from "@/components/Custom/QuotationDrawer";
 import Rounded from "@/components/Custom/RoundedButton/index";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"; // Shadcn's Sheet
 import gsap from "gsap";

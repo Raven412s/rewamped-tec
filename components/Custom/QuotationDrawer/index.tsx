@@ -1,48 +1,43 @@
-"use client";
-import { CButton } from "@/components/Animated/CButton";
-import QuotationForm from "@/components/Forms/QuotationForm";
-import { Button } from "@/components/ui/button";
+
+import QuotationForm from "@/components/Forms/QuotationForm"
 import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { X } from "lucide-react";
-import { useState } from "react";
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+  } from "@/components/ui/alert-dialog"
+  import { Button } from "@/components/ui/button"
 
-export default function QuotationDrawer({
-  triggerText,
-}: {
-  triggerText?: string;
-}) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button
-          variant="outline"
-          className="bg-gold hover:bg-gold/90"
-        >
-          {triggerText || "Get your quotation"}
-        </Button>
-      </DialogTrigger>
-      <DialogContent className="max-w-3xl p-0 border-none bg-transparent shadow-none hide-scrollbar" >
-        <CButton
-          duration={Math.floor(Math.random() * 5000) + 10000}
-          borderRadius="1.75rem"
-          style={{
-            backgroundColor: "#131415",
-            borderRadius: "calc(1.75rem * 0.96)",
-          }}
-          className="flex flex-col items-center justify-start p-6 max-h-[90vh] overflow-y-auto relative w-full hide-scrollbar" >
-          <DialogTitle className="text-lg text-center font-semibold mb-4">
-            Construction Inquiry
-          </DialogTitle>
-          <QuotationForm />
-        </CButton>
-      </DialogContent>
-    </Dialog>
-  );
-}
+  export function QuotationDrawer() {
+    return (
+      <AlertDialog>
+        <AlertDialogTrigger asChild>
+          <Button variant="outline">Show Dialog</Button>
+        </AlertDialogTrigger>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This action cannot be undone. This will permanently delete your
+              account and remove your data from our servers.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogContent>
+               {/* MODAL BOX */}
+               <div className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl hide-scrollbar">
+                    <QuotationForm />
+                </div>
+          </AlertDialogContent>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction>Continue</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+    )
+  }

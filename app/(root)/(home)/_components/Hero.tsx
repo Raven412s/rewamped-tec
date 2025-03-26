@@ -1,6 +1,6 @@
 'use client';
 
-import QuotationDrawer from '@/components/Custom/QuotationDrawer';
+import {QuotationDrawer} from '@/components/Custom/QuotationDrawer';
 import { slides } from '@/data';
 import Image from 'next/image';
 import { useEffect, useState, useRef } from 'react';

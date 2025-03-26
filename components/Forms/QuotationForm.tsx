@@ -10,6 +10,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { DialogClose } from "../ui/dialog";
 
 const formSchema = z.object({
   firstName: z.string().min(3).max(30),
@@ -186,9 +187,11 @@ export default function QuotationForm() {
           </FormItem>
         )} />
 
+        <div className="flex gap-10">
         <Button type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Submit"}
         </Button>
+        </div>
       </form>
     </Form>
   );
