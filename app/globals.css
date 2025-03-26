@@ -144,3 +144,26 @@ body {
 .hide-scrollbar::-webkit-scrollbar-track {
     background: transparent; /* Scrollbar track color */
 }
+
+.thin-scrollbar {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: var(--color-stone-500) var(--color-stone-100); /* Thumb and track color */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.thin-scrollbar::-webkit-scrollbar {
+    width: 2px; /* Adjust width as needed */
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+    background: #edc202; /* Scrollbar thumb color */
+    border-radius: 4px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #343434; /* Darker on hover */
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+    background: #090101; /* Scrollbar track color */
+}

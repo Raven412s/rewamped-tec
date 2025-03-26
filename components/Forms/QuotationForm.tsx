@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { useForm as useReactHookForm } from "react-hook-form";
 import { useForm as useFormspree } from "@formspree/react";
@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { DialogClose } from "../ui/dialog";
-import { AlertDialogCancel } from "../ui/alert-dialog";
+
 
 const formSchema = z.object({
   firstName: z.string().min(3).max(30),
@@ -24,7 +24,7 @@ const formSchema = z.object({
   message: z.string().optional(),
 });
 
-export default function QuotationForm() {
+export default function QuotationForm({ onSuccess }: { onSuccess?: () => void }) {
   const [isOtherSelected, setIsOtherSelected] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -48,6 +48,7 @@ export default function QuotationForm() {
 
       const responseData = await response.json();
 
+      onSuccess?.(); // 👈 this will close the modal
       if (response.ok) {
         toast.success("Form submitted successfully! 🎉");
         form.reset({
@@ -76,7 +77,7 @@ export default function QuotationForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-3xl mx-auto py-10 hide-scrollbar">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-3xl mx-auto py-10">
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-6">
             <FormField control={form.control} name="firstName" render={({ field }) => (
@@ -193,11 +194,11 @@ export default function QuotationForm() {
           {isSubmitting ? "Submitting..." : "Submit"}
         </Button>
 
-        <AlertDialogCancel asChild>
+        <DialogClose asChild>
             <Button disabled={isSubmitting} variant={"destructive"} type="button" size={"lg"}>
             Cancel
             </Button>
-        </AlertDialogCancel>
+        </DialogClose>
         </div>
       </form>
     </Form>
