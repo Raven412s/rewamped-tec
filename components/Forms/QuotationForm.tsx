@@ -188,15 +188,15 @@ export default function QuotationForm() {
           </FormItem>
         )} />
 
-        <div className="flex gap-10">
+        <div className="flex gap-10 items-center justify-start">
         <Button type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Submit"}
         </Button>
 
         <AlertDialogCancel asChild>
-        <Button disabled={isSubmitting} variant={"destructive"} type="button" size={"lg"}>
-          Cancel
-        </Button>
+            <Button disabled={isSubmitting} variant={"destructive"} type="button" size={"lg"}>
+            Cancel
+            </Button>
         </AlertDialogCancel>
         </div>
       </form>
