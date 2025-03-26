@@ -1,4 +1,4 @@
-
+"use client"
 import QuotationForm from "@/components/Forms/QuotationForm"
 import {
     AlertDialog,
