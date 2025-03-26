@@ -12,14 +12,17 @@ import {
     AlertDialogTrigger,
   } from "@/components/ui/alert-dialog"
   import { Button } from "@/components/ui/button"
+import { useState } from "react";
 
   export function QuotationDrawer({
     triggerText,
   }: {
     triggerText?: string;
   }) {
+const [open, setOpen] = useState(false)
+
     return (
-      <AlertDialog>
+      <AlertDialog open={open} onOpenChange={setOpen}>
         <AlertDialogTrigger asChild>
         <Button variant="outline" className="bg-gold hover:bg-gold/90">
           {triggerText || "Get your quotation"}
@@ -39,10 +42,6 @@ import {
                     <QuotationForm />
                 </div>
           </AlertDialogContent>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction>Continue</AlertDialogAction>
-          </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
     )

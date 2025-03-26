@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { DialogClose } from "../ui/dialog";
+import { AlertDialogCancel } from "../ui/alert-dialog";
 
 const formSchema = z.object({
   firstName: z.string().min(3).max(30),
@@ -191,6 +192,12 @@ export default function QuotationForm() {
         <Button type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : "Submit"}
         </Button>
+
+        <AlertDialogCancel asChild>
+        <Button disabled={isSubmitting} variant={"destructive"}>
+          Cancel
+        </Button>
+        </AlertDialogCancel>
         </div>
       </form>
     </Form>
