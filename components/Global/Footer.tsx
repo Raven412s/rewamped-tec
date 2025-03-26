@@ -173,7 +173,7 @@ export default function Footer() {
                     <p>&copy;  2025 All Rights Reserved</p>
                 </div>
                 <div className="text-xs text-muted-foreground flex gap-4 items-center justify-center ">
-                    <p>theelevatorcompany.com</p>
+                    <p>theelevatorcompany.in</p>
                 </div>
                 <div className="flex gap-4 items-center justify-center">
                 <Link href={"/privacy-policy#head"} className="text-xs text-muted-foreground"> <span className="flex gap-2 items-center"> <MdOutlinePolicy/> Privacy Policy </span> </Link>
