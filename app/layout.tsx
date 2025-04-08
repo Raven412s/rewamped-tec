@@ -54,7 +54,7 @@ export default function RootLayout({
                 <Script id="track-time-on-page" strategy="afterInteractive">
                     {`
                           let pageEnterTime = Date.now();
-                                            
+
                           window.addEventListener("beforeunload", () => {
                             const duration = Math.floor((Date.now() - pageEnterTime) / 1000);
                             if (typeof fbq === 'function') {
