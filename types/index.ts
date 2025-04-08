@@ -1,6 +1,10 @@
 import { ComponentPropsWithoutRef } from 'react';
 import { DayPicker } from 'react-day-picker';
 
+// types/global.d.ts or a similar global declarations file
+export interface Window {
+    fbq: (...args: any[]) => void;
+  }
 
 
 export type Lift = {

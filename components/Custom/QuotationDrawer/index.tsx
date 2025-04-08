@@ -24,7 +24,15 @@ export function QuotationDrawer({
     if (open) {
       html.style.overflow = "hidden";
       body.style.overflow = "hidden";
-      body.style.position = "relative"; // helps in preventing scroll jumps
+      body.style.position = "relative";
+
+      // 🔥 Track when the dialog opens
+      if (typeof window !== "undefined" && window.fbq) {
+        window.fbq("track", "Lead", {
+          content_name: "Quotation Dialog",
+          status: "opened",
+        });
+      }
     } else {
       html.style.overflow = "";
       body.style.overflow = "";
@@ -37,6 +45,7 @@ export function QuotationDrawer({
       body.style.position = "";
     };
   }, [open]);
+
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>

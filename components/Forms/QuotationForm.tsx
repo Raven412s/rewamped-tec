@@ -35,44 +35,54 @@ export default function QuotationForm({ onSuccess }: { onSuccess?: () => void })
     // Formspree Hook
     const [state, handleSubmit] = useFormspree("mgvoddzr");
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true); // Disable form fields
-    try {
-      const response = await fetch("https://formspree.io/f/mgvoddzr", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(values),
-      });
-
-      const responseData = await response.json();
-
-      onSuccess?.(); // 👈 this will close the modal
-      if (response.ok) {
-        toast.success("Form submitted successfully! 🎉");
-        form.reset({
-            firstName: "",
-            lastName: "",
-            phoneNumber: "",
-            emailId: "",
-            location: "",
-            floors: "",
-            otherFloors: "",
-            message: "",
+    async function onSubmit(values: z.infer<typeof formSchema>) {
+        setIsSubmitting(true);
+        try {
+          const response = await fetch("https://formspree.io/f/mgvoddzr", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(values),
           });
 
-      } else {
-        throw new Error(responseData?.error || "Form submission failed");
+          const responseData = await response.json();
+
+          onSuccess?.(); // Close the modal
+
+          if (response.ok) {
+            // 👇 Meta Pixel track call
+            if (typeof window !== "undefined" && window.fbq) {
+              window.fbq("track", "Lead", {
+                content_name: "Quotation Form",
+                value: "Submitted",
+              });
+            }
+
+            toast.success("Form submitted successfully! 🎉");
+
+            form.reset({
+              firstName: "",
+              lastName: "",
+              phoneNumber: "",
+              emailId: "",
+              location: "",
+              floors: "",
+              otherFloors: "",
+              message: "",
+            });
+          } else {
+            throw new Error(responseData?.error || "Form submission failed");
+          }
+        } catch (error) {
+          console.error("Form submission error:", error);
+          toast.error("Failed to submit the form. Please try again.");
+        } finally {
+          setIsOtherSelected(false);
+          setIsSubmitting(false);
+        }
       }
-    } catch (error) {
-      console.error("Form submission error:", error);
-      toast.error("Failed to submit the form. Please try again.");
-    } finally {
-        setIsOtherSelected(false)
-        setIsSubmitting(false)
-    }
-  }
+
 
 
   return (
